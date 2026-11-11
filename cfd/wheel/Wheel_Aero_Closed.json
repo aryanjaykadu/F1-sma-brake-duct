@@ -1,0 +1,95 @@
+{
+ "open": false,
+ "box_m": {
+  "x": [
+   -0.8,
+   1.2
+  ],
+  "y": [
+   -0.355,
+   1.0
+  ],
+  "z": [
+   -2.5,
+   1.2
+  ]
+ },
+ "labels": {
+  "ground": [
+   "ground_0"
+  ],
+  "inlet": [
+   "inlet"
+  ],
+  "outlet": [
+   "outlet"
+  ],
+  "farfield": [
+   "farfield_0",
+   "farfield_1",
+   "farfield_2"
+  ],
+  "wheel": [
+   "wheel_0",
+   "wheel_1",
+   "wheel_2"
+  ],
+  "cover": [
+   "cover_0",
+   "cover_1"
+  ],
+  "rotor": [
+   "rotor_0",
+   "rotor_1",
+   "rotor_2"
+  ],
+  "duct": [
+   "duct_0",
+   "duct_1",
+   "duct_2",
+   "duct_3",
+   "duct_4",
+   "duct_5",
+   "duct_6",
+   "duct_7",
+   "duct_8",
+   "duct_9",
+   "duct_10",
+   "duct_11",
+   "duct_12",
+   "duct_13"
+  ],
+  "louver1": [
+   "louver1_0",
+   "louver1_1",
+   "louver1_2",
+   "louver1_3",
+   "louver1_4",
+   "louver1_5"
+  ],
+  "louver2": [
+   "louver2_0",
+   "louver2_1",
+   "louver2_2",
+   "louver2_3",
+   "louver2_4",
+   "louver2_5"
+  ],
+  "louver3": [
+   "louver3_0",
+   "louver3_1",
+   "louver3_2",
+   "louver3_3",
+   "louver3_4",
+   "louver3_5"
+  ],
+  "louver4": [
+   "louver4_0",
+   "louver4_1",
+   "louver4_2",
+   "louver4_3",
+   "louver4_4",
+   "louver4_5"
+  ]
+ }
+}

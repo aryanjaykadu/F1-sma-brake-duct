@@ -1,0 +1,35 @@
+{
+  "cases": [
+    {
+      "key": "B",
+      "title": "Straight-line / high speed",
+      "inlet_velocity": 83.33,
+      "inlet_temperature": 300.0,
+      "outlet_gauge_pressure": 0.0,
+      "rotor_temperature": 673.15,
+      "louver_state": "OPEN (90 deg)",
+      "iterations": 500,
+      "t_pocket_min": 358.0
+    }
+  ],
+  "results": [
+    {
+      "key": "B",
+      "title": "Straight-line / high speed",
+      "louver_state": "OPEN (90 deg)",
+      "status": "COMPLETED",
+      "t_pocket_avg": 308.1267710068291,
+      "t_pocket_max": 666.3471788869834,
+      "t_outlet_massavg": 300.560782941143,
+      "rotor_heat_W": 2171.855148018411,
+      "t_pocket_check": "FAIL (308.13 K < 358.0 K)",
+      "case_file": "C:\\Temp\\F1_BrakeDuct\\cfd\\Phase2_CaseB.cas.h5",
+      "iterations": 500,
+      "wall_time_s": 2164.242248773575,
+      "notes": [
+        "DO divisions: AttributeError: 'angular_discretization' object has no attribute 'theta_divisions'.\nThe most similar names are: n_theta_divisions, n_phi_divisions.\nThe most similar names are: "
+      ]
+    }
+  ],
+  "mesh_cells": 515700
+}

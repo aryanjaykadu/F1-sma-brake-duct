@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Fluent / MAPDL working files (large, machine-specific)
+*.h5
+*.cas
+*.dat
+*.trn
+*.msh
+*.msh.gz
+*.rst
+*.db
+*.rdb
+*.esav
+*.emat
+*.full
+*.r0*
+*.err
+*.log
+*.npz
+*_workflow_files/
+FM_*/
+fea/mapdl/
+
+# SOLIDWORKS temp / lock files
+~$*
+*.SLDBAK

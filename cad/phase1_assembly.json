@@ -1,0 +1,130 @@
+{
+  "assembly": "C:\\Temp\\F1_BrakeDuct\\cad\\Phase1_ThermoKinetic_Assembly.SLDASM",
+  "mates": [
+    {
+      "name": "Housing_Front_Coincident",
+      "type": 0,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Housing_Top_Coincident",
+      "type": 0,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Housing_Right_Coincident",
+      "type": 0,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Louver1_Pivot_Concentric",
+      "type": 1,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Louver1_Centre_Coincident",
+      "type": 0,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Louver2_Pivot_Concentric",
+      "type": 1,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Louver2_Centre_Coincident",
+      "type": 0,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Louver3_Pivot_Concentric",
+      "type": 1,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Louver3_Centre_Coincident",
+      "type": 0,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Louver4_Pivot_Concentric",
+      "type": 1,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Louver4_Centre_Coincident",
+      "type": 0,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Rod_Plane_Distance",
+      "type": 5,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Rod_Link1_Concentric",
+      "type": 1,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Rod_Link2_Concentric",
+      "type": 1,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Rod_Link3_Concentric",
+      "type": 1,
+      "ok": true,
+      "error": 1
+    },
+    {
+      "name": "Rod_Link4_Concentric",
+      "type": 1,
+      "ok": true,
+      "error": 1
+    }
+  ],
+  "rod_origin_mm": {
+    "0.0": [
+      66.34239731993654,
+      133.0001456012344,
+      -35.50000000000001
+    ],
+    "20.0": [
+      68.2333154005707,
+      136.27537779633417,
+      -35.50000000000001
+    ],
+    "40.0": [
+      68.89006678802299,
+      139.99999999999983,
+      -35.50000000000001
+    ],
+    "60.0": [
+      68.23331540057092,
+      143.7246222036655,
+      -35.50000000000001
+    ],
+    "80.0": [
+      66.34227514815949,
+      146.99999999999991,
+      -35.50000000000001
+    ]
+  },
+  "stroke_80deg_mm": 13.9998543987655,
+  "lateral_80deg_mm": -0.0001221717770422126
+}

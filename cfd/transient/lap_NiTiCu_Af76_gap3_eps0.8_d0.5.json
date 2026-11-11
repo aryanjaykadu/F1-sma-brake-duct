@@ -1,0 +1,78 @@
+{
+  "alloy": "NiTiCu",
+  "wire_d_mm": 0.5,
+  "transformation_C": {
+    "As": 70.0,
+    "Af": 76.0,
+    "Ms": 64.0,
+    "Mf": 58.0
+  },
+  "gap_mm": 3.0,
+  "wire_emissivity": 0.8,
+  "lap_time_s": 98.5,
+  "rotor_fit": {
+    "f_brake": 0.12455526019704898,
+    "hA_300_W_K": 27.752282674873744,
+    "last_lap_max_K": 1073.149999999999,
+    "last_lap_min_K": 673.0322530409593
+  },
+  "spring_env": {
+    "G_fit": "G = 1.696 sigma Tr^4 + 1058",
+    "U_fit": "U = 2.32 + 0.106 V",
+    "T_air_K": 305.048772548731
+  },
+  "wire_last_lap": {
+    "min_K": 313.35907444548434,
+    "max_K": 356.19886357366073
+  },
+  "tau_wire_s_at_300kmh": 1.3567849067760296,
+  "braking_events": [
+    {
+      "zone": 1,
+      "straight_before_s": 12.0,
+      "max_angle_deg": 0.0,
+      "peak_wire_K": 345.6244308559815,
+      "peak_rotor_K": 1005.5782003917476,
+      "time_to_40deg_s": null,
+      "mean_angle_on_next_straight_deg": 0.0
+    },
+    {
+      "zone": 2,
+      "straight_before_s": 6.0,
+      "max_angle_deg": 86.157769,
+      "peak_wire_K": 353.14047989743653,
+      "peak_rotor_K": 1062.182488750889,
+      "time_to_40deg_s": 4.409999999999997,
+      "mean_angle_on_next_straight_deg": 1.1626426993333334
+    },
+    {
+      "zone": 3,
+      "straight_before_s": 15.0,
+      "max_angle_deg": 0.0,
+      "peak_wire_K": 343.9338982678907,
+      "peak_rotor_K": 973.8524931554799,
+      "time_to_40deg_s": null,
+      "mean_angle_on_next_straight_deg": 0.0
+    },
+    {
+      "zone": 4,
+      "straight_before_s": 4.0,
+      "max_angle_deg": 86.157769,
+      "peak_wire_K": 356.19886357366073,
+      "peak_rotor_K": 1073.149999999999,
+      "time_to_40deg_s": 3.9399999999999977,
+      "mean_angle_on_next_straight_deg": 4.621601135555555
+    },
+    {
+      "zone": 5,
+      "straight_before_s": 9.0,
+      "max_angle_deg": 86.157769,
+      "peak_wire_K": 350.62851751287513,
+      "peak_rotor_K": 1053.7094997039605,
+      "time_to_40deg_s": 4.909999999999968,
+      "mean_angle_on_next_straight_deg": null
+    }
+  ],
+  "pct_time_open_on_straights": 1.6503800217155264,
+  "pct_time_open_braking_corners": 34.71877979027646
+}

@@ -1,0 +1,86 @@
+{
+  "cases": [
+    {
+      "key": "A",
+      "title": "Corner entry / heavy braking",
+      "inlet_velocity": 27.78,
+      "inlet_temperature": 300.0,
+      "outlet_gauge_pressure": 0.0,
+      "rotor_temperature": 1073.15,
+      "louver_state": "CLOSED (0 deg)",
+      "iterations": 500,
+      "t_pocket_min": 358.0
+    },
+    {
+      "key": "B",
+      "title": "Straight-line / high speed",
+      "inlet_velocity": 83.33,
+      "inlet_temperature": 300.0,
+      "outlet_gauge_pressure": 0.0,
+      "rotor_temperature": 673.15,
+      "louver_state": "OPEN (90 deg)",
+      "iterations": 500,
+      "t_pocket_min": 358.0
+    }
+  ],
+  "results": [
+    {
+      "key": "A",
+      "title": "Corner entry / heavy braking",
+      "louver_state": "CLOSED (0 deg)",
+      "status": "COMPLETED",
+      "t_pocket_avg": 324.0852227804453,
+      "t_pocket_max": 1064.031003253434,
+      "t_outlet_massavg": 302.1548776963758,
+      "rotor_heat_W": 4080.740329609323,
+      "t_pocket_check": "FAIL (324.09 K < 358.0 K)",
+      "case_file": "C:\\Temp\\F1_BrakeDuct\\cfd\\Phase2_CaseA.cas.h5",
+      "iterations": 500,
+      "wall_time_s": 3724.305744409561,
+      "notes": [
+        "DO divisions: AttributeError: 'angular_discretization' object has no attribute 'theta_divisions'.\nThe most similar names are: n_theta_divisions, n_phi_divisions.\nThe most similar names are: "
+      ],
+      "wire_T_K_gap3to15mm": {
+        "0.2": [
+          326.3527610889673,
+          336.7438440775721
+        ],
+        "0.6": [
+          377.983313675787,
+          392.59409058281017
+        ]
+      }
+    },
+    {
+      "key": "B",
+      "title": "Straight-line / high speed",
+      "louver_state": "OPEN (90 deg)",
+      "status": "COMPLETED",
+      "t_pocket_avg": 308.1267710068291,
+      "t_pocket_max": 666.3471788869834,
+      "t_outlet_massavg": 300.560782941143,
+      "rotor_heat_W": 2171.855148018411,
+      "t_pocket_check": "n/a (closing case: wire must fall below Mf = 318 K)",
+      "case_file": "C:\\Temp\\F1_BrakeDuct\\cfd\\Phase2_CaseB.cas.h5",
+      "iterations": 500,
+      "wall_time_s": 2164.242248773575,
+      "notes": [
+        "DO divisions: AttributeError: 'angular_discretization' object has no attribute 'theta_divisions'.\nThe most similar names are: n_theta_divisions, n_phi_divisions.\nThe most similar names are: "
+      ],
+      "wire_T_K_gap3to15mm": {
+        "0.2": [
+          302.7153799134884,
+          304.89545066975813
+        ],
+        "0.6": [
+          308.08708414031486,
+          310.70832977538623
+        ]
+      }
+    }
+  ],
+  "mesh_cells": {
+    "A": 492211,
+    "B": 515700
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "mesh_cells": {
+    "Closed": 765201,
+    "Open": 769990
+  },
+  "final": {
+    "Open": {
+      "drag_wheel_N": 1144.055474414995,
+      "drag_cover_N": -0.04844778267349953,
+      "drag_rotor_N": 0.6547350765057367,
+      "drag_duct_N": 37.43476523602145,
+      "drag_louver_N": 0.06199588885053116,
+      "drag_total_N": 1182.158522833699,
+      "Cd_assembly": 1.3085116821403797,
+      "throat_mass_flow_kg_s": 0.1553517817415218,
+      "scoop_mass_flow_kg_s": 0.1574426114635745,
+      "ideal_capture_kg_s": 0.6124999999999999
+    },
+    "Closed": {
+      "drag_wheel_N": 1125.112427111132,
+      "drag_cover_N": -1.010247708594345,
+      "drag_rotor_N": -1.202588375756022,
+      "drag_duct_N": 38.47802505630345,
+      "drag_louver_N": -0.01278689520927598,
+      "drag_total_N": 1161.364829187876,
+      "Cd_assembly": 1.2854954871674868,
+      "throat_mass_flow_kg_s": 0.1302458895760473,
+      "scoop_mass_flow_kg_s": 0.1426836125175161,
+      "ideal_capture_kg_s": 0.6124999999999999
+    }
+  },
+  "drag_total_avg_last200_N": {
+    "Open": 1182.9846264657485,
+    "Closed": 1167.623263405421
+  },
+  "drag_total_oscillation_half_band_N": {
+    "Open": 5.687021607307088,
+    "Closed": 12.620393661940398
+  },
+  "delta_closing_N": -15.361363060327449,
+  "delta_closing_pct": -1.2985260092703506,
+  "throat_flow_change_pct": -16.160672175132383,
+  "duct_momentum_drag_bound_N": 12.945981811793484,
+  "duct_momentum_bound_pct": 1.0943491168157047,
+  "target_pct": -18.4
+}

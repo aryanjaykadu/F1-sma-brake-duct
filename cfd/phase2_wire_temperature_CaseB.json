@@ -1,0 +1,177 @@
+{
+  "method": "SMA spring-wire temperature in the relocated pocket (rotor wake face), Case A.\n\nInputs come from Fluent (relocated Case A, DO radiation): area-averaged incident radiation G, air temperature\nand velocity on planes 0.5-15 mm outboard of the rotor face (pocket_planes.json).\n\nSteady balance on a gray wire (d = 1.2 mm) in a radiation field. A convex body absorbs eps * G / 4 per unit\nsurface area (projected-area theorem); coil self-shadowing is covered by a view-scale factor:\n\n    view * eps * G / 4  =  eps * sigma * Tw^4  +  h * (Tw - T_air)\n\nh from Churchill-Bernstein (cylinder in cross-flow). Conduction into the spring end fittings and the rod is\nneglected, so these are upper-bound wire temperatures for a spring held in place at that gap.\n",
+  "Af_K": 358.15,
+  "wire_d_m": 0.0012,
+  "planes": [
+    {
+      "gap_mm": 0.5,
+      "G_W_m2": 20855.29435480143,
+      "T_air_K": 390.8852177088802,
+      "U_m_s": 10.95312949448157,
+      "Tw_by_eps": {
+        "0.2": 393.3542065901851,
+        "0.4": 395.78056609915285,
+        "0.6": 398.1642198280095,
+        "0.8": 400.5051587377438
+      },
+      "Tw_eps06_view07": 395.2380053552994,
+      "Tw_eps06_2xU": 396.0693874249832,
+      "eps_needed_view1": 0.0,
+      "eps_needed_view07": 0.0,
+      "h_W_m2K": 312.296102619538
+    },
+    {
+      "gap_mm": 1,
+      "G_W_m2": 20838.73912164372,
+      "T_air_K": 322.6539619446662,
+      "U_m_s": 11.24967582133743,
+      "Tw_by_eps": {
+        "0.2": 325.51242642145615,
+        "0.4": 328.3445263977322,
+        "0.6": 331.1494965627049,
+        "0.8": 333.92660571811916
+      },
+      "Tw_eps06_view07": 328.2594102467095,
+      "Tw_eps06_2xU": 328.66391457117356,
+      "eps_needed_view1": null,
+      "eps_needed_view07": null,
+      "h_W_m2K": 319.77772090475736
+    },
+    {
+      "gap_mm": 2,
+      "G_W_m2": 20823.14401916009,
+      "T_air_K": 305.9018647797078,
+      "U_m_s": 11.23052908805833,
+      "Tw_by_eps": {
+        "0.2": 308.8247292891176,
+        "0.4": 311.7251699329886,
+        "0.6": 314.6023630853293,
+        "0.8": 317.4555086066231
+      },
+      "Tw_eps06_view07": 311.716024805548,
+      "Tw_eps06_2xU": 312.0472781484918,
+      "eps_needed_view1": null,
+      "eps_needed_view07": null,
+      "h_W_m2K": 320.6931642226159
+    },
+    {
+      "gap_mm": 3,
+      "G_W_m2": 20804.22318620839,
+      "T_air_K": 301.956231505817,
+      "U_m_s": 11.18375436086155,
+      "Tw_by_eps": {
+        "0.2": 304.89545066975813,
+        "0.4": 307.8130951200197,
+        "0.6": 310.70832977538623,
+        "0.8": 313.5803407611669
+      },
+      "Tw_eps06_view07": 307.81991606403193,
+      "Tw_eps06_2xU": 308.13608476302926,
+      "eps_needed_view1": null,
+      "eps_needed_view07": null,
+      "h_W_m2K": 320.3288186545818
+    },
+    {
+      "gap_mm": 4,
+      "G_W_m2": 20749.80178141767,
+      "T_air_K": 300.5010868363575,
+      "U_m_s": 11.12409997486399,
+      "Tw_by_eps": {
+        "0.2": 303.4443971308917,
+        "0.4": 306.36641075925394,
+        "0.6": 309.2662892489351,
+        "0.8": 312.14321460545136
+      },
+      "Tw_eps06_view07": 306.37828425646705,
+      "Tw_eps06_2xU": 306.68972053668483,
+      "eps_needed_view1": null,
+      "eps_needed_view07": null,
+      "h_W_m2K": 319.5855189803951
+    },
+    {
+      "gap_mm": 6,
+      "G_W_m2": 20618.78424656633,
+      "T_air_K": 300.0388403552959,
+      "U_m_s": 11.12290986477061,
+      "Tw_by_eps": {
+        "0.2": 302.9633694606142,
+        "0.4": 305.8668466090417,
+        "0.6": 308.7484462863656,
+        "0.8": 311.60736301230196
+      },
+      "Tw_eps06_view07": 305.8787044344374,
+      "Tw_eps06_2xU": 306.18795284137974,
+      "eps_needed_view1": null,
+      "eps_needed_view07": null,
+      "h_W_m2K": 319.60785655311145
+    },
+    {
+      "gap_mm": 8,
+      "G_W_m2": 20416.9093556883,
+      "T_air_K": 300.0029927124555,
+      "U_m_s": 11.14966307626579,
+      "Tw_by_eps": {
+        "0.2": 302.89271205301986,
+        "0.4": 305.761654784686,
+        "0.6": 308.6090193078719,
+        "0.8": 311.4340236766249
+      },
+      "Tw_eps06_view07": 305.77080228176806,
+      "Tw_eps06_2xU": 306.07877872651085,
+      "eps_needed_view1": null,
+      "eps_needed_view07": null,
+      "h_W_m2K": 320.0007913655306
+    },
+    {
+      "gap_mm": 10,
+      "G_W_m2": 20152.21948116185,
+      "T_air_K": 300.0002952294263,
+      "U_m_s": 11.18558485435164,
+      "Tw_by_eps": {
+        "0.2": 302.84425864470546,
+        "0.4": 305.6677960608094,
+        "0.6": 308.4701367175353,
+        "0.8": 311.2505290338294
+      },
+      "Tw_eps06_view07": 305.67322294621624,
+      "Tw_eps06_2xU": 305.9797008765763,
+      "eps_needed_view1": null,
+      "eps_needed_view07": null,
+      "h_W_m2K": 320.52394190238215
+    },
+    {
+      "gap_mm": 12,
+      "G_W_m2": 19837.07362037594,
+      "T_air_K": 300.0000371903492,
+      "U_m_s": 11.23362352280925,
+      "Tw_by_eps": {
+        "0.2": 302.7890588525543,
+        "0.4": 305.55807851489214,
+        "0.6": 308.30636164430746,
+        "0.8": 311.03319230618837
+      },
+      "Tw_eps06_view07": 305.5590823444399,
+      "Tw_eps06_2xU": 305.86370232525184,
+      "eps_needed_view1": null,
+      "eps_needed_view07": null,
+      "h_W_m2K": 321.2213531196245
+    },
+    {
+      "gap_mm": 15,
+      "G_W_m2": 19398.66895327129,
+      "T_air_K": 300.0000036916047,
+      "U_m_s": 11.28072409286655,
+      "Tw_by_eps": {
+        "0.2": 302.7153799134884,
+        "0.4": 305.41130264183397,
+        "0.6": 308.08708414031486,
+        "0.8": 310.7420545353816
+      },
+      "Tw_eps06_view07": 305.4061563742905,
+      "Tw_eps06_2xU": 305.7086055515783,
+      "eps_needed_view1": null,
+      "eps_needed_view07": null,
+      "h_W_m2K": 321.9062397037854
+    }
+  ]
+}

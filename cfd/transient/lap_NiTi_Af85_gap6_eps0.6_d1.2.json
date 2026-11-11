@@ -1,0 +1,78 @@
+{
+  "alloy": "NiTi",
+  "wire_d_mm": 1.2,
+  "transformation_C": {
+    "As": 75.0,
+    "Af": 85.0,
+    "Ms": 55.0,
+    "Mf": 45.0
+  },
+  "gap_mm": 6.0,
+  "wire_emissivity": 0.6,
+  "lap_time_s": 98.5,
+  "rotor_fit": {
+    "f_brake": 0.12455526019704898,
+    "hA_300_W_K": 27.752282674873744,
+    "last_lap_max_K": 1073.149999999999,
+    "last_lap_min_K": 673.0322530409593
+  },
+  "spring_env": {
+    "G_fit": "G = 1.679 sigma Tr^4 + 1068",
+    "U_fit": "U = 2.22 + 0.107 V",
+    "T_air_K": 300.1374272203383
+  },
+  "wire_last_lap": {
+    "min_K": 314.1067861332681,
+    "max_K": 349.1148538468283
+  },
+  "tau_wire_s_at_300kmh": 5.074450252597269,
+  "braking_events": [
+    {
+      "zone": 1,
+      "straight_before_s": 12.0,
+      "max_angle_deg": 0.0,
+      "peak_wire_K": 338.2102930497209,
+      "peak_rotor_K": 1005.5782003917476,
+      "time_to_40deg_s": null,
+      "mean_angle_on_next_straight_deg": 0.0
+    },
+    {
+      "zone": 2,
+      "straight_before_s": 6.0,
+      "max_angle_deg": 0.0,
+      "peak_wire_K": 347.7974133336874,
+      "peak_rotor_K": 1062.182488750889,
+      "time_to_40deg_s": null,
+      "mean_angle_on_next_straight_deg": 0.0
+    },
+    {
+      "zone": 3,
+      "straight_before_s": 15.0,
+      "max_angle_deg": 0.0,
+      "peak_wire_K": 333.30639846567965,
+      "peak_rotor_K": 973.8524931554799,
+      "time_to_40deg_s": null,
+      "mean_angle_on_next_straight_deg": 0.0
+    },
+    {
+      "zone": 4,
+      "straight_before_s": 4.0,
+      "max_angle_deg": 0.0,
+      "peak_wire_K": 349.1148538468283,
+      "peak_rotor_K": 1073.149999999999,
+      "time_to_40deg_s": null,
+      "mean_angle_on_next_straight_deg": 0.0
+    },
+    {
+      "zone": 5,
+      "straight_before_s": 9.0,
+      "max_angle_deg": 0.0,
+      "peak_wire_K": 346.62109577799157,
+      "peak_rotor_K": 1053.7094997039605,
+      "time_to_40deg_s": null,
+      "mean_angle_on_next_straight_deg": null
+    }
+  ],
+  "pct_time_open_on_straights": 0.0,
+  "pct_time_open_braking_corners": 0.0
+}

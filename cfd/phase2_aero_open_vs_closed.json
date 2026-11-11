@@ -1,0 +1,66 @@
+{
+  "open": {
+    "drag_louvers_N": 3.358237911792855,
+    "zones": {
+      "fluid_domain-louver_2": 0.7310691638392971,
+      "fluid_domain-louver_3": 0.9450616818881734,
+      "fluid_domain-louver_4": 1.395424758972868,
+      "fluid_domain-louver_1": 0.2866823070925169,
+      "fluid_domain-louver_2-shadow": 0.0,
+      "fluid_domain-louver_3-shadow": 0.0,
+      "fluid_domain-louver_4-shadow": 0.0,
+      "fluid_domain-louver_1-shadow": 0.0,
+      "duct_wall-fluid_domain": -14.93544737764953,
+      "duct_wall-fluid_domain-shadow": 0.0,
+      "id_rotor": 0.0,
+      "rotor-sma_pocket": 0.02807635744602521,
+      "fluid_domain-rotor": 753.4137659815308,
+      "rotor-sma_pocket-shadow": 0.0,
+      "fluid_domain-rotor-shadow": 0.0
+    },
+    "drag_duct_N": -14.93544737764953,
+    "drag_rotor_N": 753.4418423389768,
+    "drag_total_N": 741.8646328731202,
+    "drag_duct_system_N": -11.577209465856674,
+    "throat_mass_flow_kg_s": 0.3979473688996645,
+    "throat_area_m2": 0.005958470507515042,
+    "throat_mean_u_m_s": 56.77095989548032,
+    "rotor_heat_W": 2171.855148018404,
+    "inlet_mass_flow_kg_s": 2.745418763183491
+  },
+  "closed": {
+    "drag_louvers_N": 95.00379364246112,
+    "zones": {
+      "fluid_domain-louver_3": 20.12087103621599,
+      "fluid_domain-louver_4": 19.40863124482241,
+      "fluid_domain-louver_2": 27.52372969874398,
+      "fluid_domain-louver_1": 27.95056166267875,
+      "fluid_domain-louver_3-shadow": 0.0,
+      "fluid_domain-louver_4-shadow": 0.0,
+      "fluid_domain-louver_2-shadow": 0.0,
+      "fluid_domain-louver_1-shadow": 0.0,
+      "duct_wall-fluid_domain": -8.608318104132762,
+      "duct_wall-fluid_domain-shadow": 0.0,
+      "id_rotor": 0.0,
+      "rotor-sma_pocket": 0.07468033194600092,
+      "fluid_domain-rotor": 640.656278932662,
+      "rotor-sma_pocket-shadow": 0.0,
+      "fluid_domain-rotor-shadow": 0.0
+    },
+    "drag_duct_N": -8.608318104132762,
+    "drag_rotor_N": 640.7309592646079,
+    "drag_total_N": 727.1264348029363,
+    "drag_duct_system_N": 86.39547553832836,
+    "throat_mass_flow_kg_s": 0.2920437451208023,
+    "throat_area_m2": 0.005958502251485753,
+    "throat_mean_u_m_s": 41.66938877906165,
+    "rotor_heat_W": 2895.023422133853,
+    "inlet_mass_flow_kg_s": 2.745418763183491
+  },
+  "summary": {
+    "duct_system_drag_change_pct_closing": -846.2547498438596,
+    "total_drag_change_pct_closing": -1.9866424974466397,
+    "throat_flow_change_pct_closing": -26.612469903165504,
+    "rotor_heat_change_pct_closing": 33.29726085900645
+  }
+}

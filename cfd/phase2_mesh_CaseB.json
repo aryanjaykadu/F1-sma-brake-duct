@@ -1,0 +1,16 @@
+{
+  "objects": {
+    "origin-object2": "sma_pocket",
+    "origin-object55": "louver_4",
+    "origin-object108": "louver_3",
+    "origin-object161": "louver_2",
+    "origin-object214": "louver_1",
+    "origin-object267": "duct_wall",
+    "origin-object366": "rotor",
+    "origin-object419": "fluid_domain"
+  },
+  "mesh": "C:\\Temp\\F1_BrakeDuct\\cfd\\Phase2_CHT_Domain_CaseB.msh.h5",
+  "local_size_mm": 1.0,
+  "max_size_mm": 10.0,
+  "bl_layers": 10
+}

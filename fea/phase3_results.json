@@ -1,0 +1,256 @@
+{
+  "inputs": {
+    "crank_r_mm": 10.890066788022889,
+    "k_A_Nmm": 4.229323308270675,
+    "k_M_Nmm": 1.578947368421052,
+    "delta_L_mm": 49.00884539600078,
+    "install_mm": 29.405307237600468,
+    "detwin_N": 6.041063324720547,
+    "aero_torque_Nmm": 16.72193003875576,
+    "aero_theta_deg": 79.0,
+    "required_force_80deg_N": 29.817923044624138
+  },
+  "stress_checks": [
+    {
+      "location": "Case 1 (25 C) louver pivot pins",
+      "material": "PA-CF",
+      "peak_MPa": 10.43854907386657,
+      "yield_MPa": 140.0,
+      "fos": 13.411825629147733,
+      "check": "PASS"
+    },
+    {
+      "location": "Case 1 (25 C) louver crank arm + pin",
+      "material": "PA-CF",
+      "peak_MPa": 5.1403760700623415,
+      "yield_MPa": 140.0,
+      "fos": 27.235361399988406,
+      "check": "PASS"
+    },
+    {
+      "location": "Case 1 (25 C) housing pivot holes",
+      "material": "PA-CF",
+      "peak_MPa": 42.69406041047696,
+      "yield_MPa": 140.0,
+      "fos": 3.279144655110961,
+      "check": "PASS"
+    },
+    {
+      "location": "Case 1 (25 C) rod link holes",
+      "material": "Al 7075-T6",
+      "peak_MPa": 0.967976281592594,
+      "yield_MPa": 503.0,
+      "fos": 519.640831666271,
+      "check": "PASS"
+    },
+    {
+      "location": "Case 2 (85 C) louver pivot pins",
+      "material": "PA-CF",
+      "peak_MPa": 17.238901923929358,
+      "yield_MPa": 140.0,
+      "fos": 8.121166917578764,
+      "check": "PASS"
+    },
+    {
+      "location": "Case 2 (85 C) louver crank arm + pin",
+      "material": "PA-CF",
+      "peak_MPa": 9.277012575756165,
+      "yield_MPa": 140.0,
+      "fos": 15.091065023008085,
+      "check": "PASS"
+    },
+    {
+      "location": "Case 2 (85 C) housing pivot holes",
+      "material": "PA-CF",
+      "peak_MPa": 33.87750638503589,
+      "yield_MPa": 140.0,
+      "fos": 4.132535565304762,
+      "check": "PASS"
+    },
+    {
+      "location": "Case 2 (85 C) rod link holes",
+      "material": "Al 7075-T6",
+      "peak_MPa": 9.175331265177617,
+      "yield_MPa": 503.0,
+      "fos": 54.820908963689924,
+      "check": "PASS"
+    }
+  ],
+  "runs": {
+    "pivot_cold": {
+      "label": "cold",
+      "converged": true,
+      "nodes": 42870,
+      "elements": 22766,
+      "peaks_MPa": {
+        "louver_pins": 10.43854907386657,
+        "crank_arm": 5.1403760700623415,
+        "louver_flap": 5.506809817132438,
+        "housing_holes": 42.69406041047696
+      },
+      "restraint_torque_Nmm": -6.6046615139664535
+    },
+    "rod_cold": {
+      "label": "cold",
+      "converged": true,
+      "nodes": 26746,
+      "elements": 15064,
+      "peaks_MPa": {
+        "rod_holes": 0.967976281592594,
+        "rod_pegs": 3.1278483559975943,
+        "rod_overall": 3.1278483559975943
+      },
+      "restraint_reactions_N": [
+        0.002087069473001993,
+        -2.513075157106715e-07,
+        -0.0020870702918828793
+      ]
+    },
+    "pivot_hot": {
+      "label": "hot",
+      "converged": true,
+      "nodes": 42870,
+      "elements": 22766,
+      "peaks_MPa": {
+        "louver_pins": 17.238901923929358,
+        "crank_arm": 9.277012575756165,
+        "louver_flap": 9.286876912051964,
+        "housing_holes": 33.87750638503589
+      },
+      "restraint_torque_Nmm": -1.057845754545257
+    },
+    "rod_hot": {
+      "label": "hot",
+      "converged": true,
+      "nodes": 26746,
+      "elements": 15064,
+      "peaks_MPa": {
+        "rod_holes": 9.175331265177617,
+        "rod_pegs": 20.402613468775208,
+        "rod_overall": 20.402613468775208
+      },
+      "restraint_reactions_N": [
+        0.005178566416988073,
+        -0.10517317267487032,
+        -0.02032359480783303
+      ]
+    }
+  },
+  "actuation": {
+    "cold_theta_deg": -0.01193446932590392,
+    "hot_theta_deg": 86.1640432549787,
+    "hot_stroke_mm": 14.854459248950787,
+    "hot_sma_force_N": 32.59121142790128,
+    "hot_bias_force_N": 22.832838065912092,
+    "sma_force_at_Af_N": 32.0,
+    "stroke_target_mm": 14.0,
+    "stroke_check": "PASS",
+    "angle_check": "PASS"
+  },
+  "sweep": {
+    "heating": [
+      [
+        25,
+        -0.00469790144975505,
+        true
+      ],
+      [
+        45,
+        -0.00469790144975505,
+        true
+      ],
+      [
+        55,
+        -0.00469790144975505,
+        true
+      ],
+      [
+        65,
+        -0.00469790144975505,
+        true
+      ],
+      [
+        75,
+        -0.00469790144975505,
+        true
+      ],
+      [
+        77.5,
+        -0.0029716648695424985,
+        true
+      ],
+      [
+        80,
+        2.3726350415927944,
+        true
+      ],
+      [
+        82.5,
+        12.775284984911227,
+        true
+      ],
+      [
+        85,
+        14.854459248950787,
+        true
+      ],
+      [
+        95,
+        15.34712959758862,
+        true
+      ]
+    ],
+    "cooling": [
+      [
+        95,
+        15.34712959758862,
+        true
+      ],
+      [
+        85,
+        14.854459248950787,
+        true
+      ],
+      [
+        75,
+        14.854459248950787,
+        true
+      ],
+      [
+        65,
+        14.854459248950787,
+        true
+      ],
+      [
+        55,
+        14.854459248950787,
+        true
+      ],
+      [
+        52.5,
+        12.775284984911227,
+        true
+      ],
+      [
+        50,
+        2.3726350415927944,
+        true
+      ],
+      [
+        47.5,
+        -0.0029716648695424985,
+        true
+      ],
+      [
+        45,
+        -0.00469790144975505,
+        true
+      ],
+      [
+        25,
+        -0.00469790144975505,
+        true
+      ]
+    ]
+  }
+}
