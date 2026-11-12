@@ -31,6 +31,41 @@ about 1 % of the wheel's drag, so no louver design gets close to 18 %.
 The full numbers, method and limits are in [docs/RESULTS.md](docs/RESULTS.md),
 and the write-up is in [report/ThermoKinetic_BrakeDuct_Whitepaper.pdf](report/ThermoKinetic_BrakeDuct_Whitepaper.pdf).
 
+## Bench rig (designed and virtually tested, not built yet)
+
+The next step is a bench rig that heats the spring pack the way the braking
+rotor does and cools it the way the airflow does, so the simulations can be
+checked against measurements. It has a halogen lamp standing in for the rotor
+and a blower standing in for car speed, with thermocouples, a magnetic angle
+sensor and a load cell. It consists of:
+
+- **Rig CAD:** SOLIDWORKS assembly with zero interferences.
+- **Electronics:** an Arduino Uno shield in KiCad. ERC and DRC are clean, and
+  Gerbers are ready to order.
+- **Firmware:** compiled for the Uno, using 57 % of flash and 55 % of RAM.
+- **Digital twin:** runs the same firmware code against a physics model of the
+  rig. The Phase 4 logger connects to it over a TCP "serial port".
+
+| Virtual test | Twin result |
+|---|---|
+| Slow ramp hysteresis | Opens 72-75 °C, closes 63-60 °C, 11.5 °C wide (design 12 °C) |
+| 0.5 mm vs 1.2 mm wire | Closes in 1.9 s vs 5.7 s |
+| Car lap replayed on the rig | Same 3 openings per lap as the car model, 87 % open/closed agreement |
+| 1,000 heat/cool cycles | All complete, no firmware faults (no fatigue model) |
+| Sensor and cooling failures | Heater latches off in both cases |
+
+The twin also caught design problems before anything was built:
+
+- **Heater switching window:** at 1 s it distorted the hysteresis measurement,
+  so it is now 200 ms.
+- **Rig capacity:** the first layout was too weak to reproduce the car lap, so
+  a blower was added and the lamp moved closer.
+- **Phase 1 CAD bug:** the linkage rod was sitting on the wrong side of the duct.
+
+Details are in [docs/RIG.md](docs/RIG.md).
+
+![Bench rig](cad/rig/Bench_Rig_iso.png)
+
 ## Limits (read before quoting numbers)
 
 - ANSYS Student licence: meshes are capped at 1M cells, so the CFD is coarse.
@@ -42,14 +77,16 @@ and the write-up is in [report/ThermoKinetic_BrakeDuct_Whitepaper.pdf](report/Th
 - The NiTiCu transformation temperatures are design targets, not a datasheet
   alloy.
 - **No hardware was built or tested.** The bench file in `bench/` is a
-  simulated dry run of the logging script.
+  simulated dry run of the logging script, and the rig results in
+  `bench/virtual/` come from the digital twin, not measurements.
 - Moving aero parts are banned under the F1 technical regulations, so this
   is a research and non-FIA concept.
 
 ## Tools
 
-SOLIDWORKS 2025, ANSYS Student 2026 R1 (Fluent, MAPDL), Python 3.13
-(pywin32, PyFluent, PyMAPDL, gmsh, numpy, matplotlib, ReportLab).
+SOLIDWORKS 2025, ANSYS Student 2026 R1 (Fluent, MAPDL), KiCad 10,
+arduino-cli (Arduino Uno), MSVC, Python 3.13
+(pywin32, PyFluent, PyMAPDL, gmsh, numpy, matplotlib, ReportLab, pyserial).
 All CAD and simulation runs are driven from the Python scripts in this repo.
 
 ## Repo layout
@@ -61,6 +98,9 @@ All CAD and simulation runs are driven from the Python scripts in this repo.
 | `phase3_fea.py` | MAPDL linkage and stress model |
 | `phase4_bench_validation.py` | DAQ logger (only run in simulation) |
 | `phase5_generate_whitepaper.py` | Builds the PDF from the result files |
+| `rig_cad.py` | SOLIDWORKS bench rig parts and assembly |
+| `electronics/` | KiCad shield: schematic and PCB generators, Gerbers, BOM |
+| `firmware/` | Arduino firmware, lap-profile generator, digital twin and test campaign |
 | `cad/`, `cfd/`, `fea/`, `bench/`, `report/` | Models, plots and result JSON |
 
 Solver case and data files (several GB) are not included. Re-running needs

@@ -1,0 +1,162 @@
+{
+  "data_source": "DIGITAL TWIN - not measured data",
+  "firmware": "firmware/sma_rig/rig_core.cpp (host build rig_core.dll)",
+  "T1_hysteresis": {
+    "heating_5pct_C": 71.95267857142856,
+    "heating_50pct_C": 73.5,
+    "heating_95pct_C": 75.0,
+    "cooling_95pct_C": 63.25,
+    "cooling_50pct_C": 61.98625,
+    "cooling_5pct_C": 60.0,
+    "max_stroke_mm": 15.353,
+    "max_force_N": 15.41,
+    "max_angle_deg": 90.09,
+    "hysteresis_width_50pct_C": 11.513750000000002,
+    "tc1_minus_wire_rms_C": 0.2368975957606959,
+    "pi_tracking_rms_C": 1.38977139584577,
+    "pi_tracking_max_C": 18.680000000000007
+  },
+  "T2_step": {
+    "wire_0.5mm": {
+      "max_stroke_mm": 15.19,
+      "peak_temp_C": 100.0,
+      "open_90pct_s": 3.6021941309255077,
+      "close_10pct_s": 1.8884523809523799,
+      "fault": 0
+    },
+    "wire_1.2mm": {
+      "max_stroke_mm": 15.256,
+      "peak_temp_C": 96.25,
+      "open_90pct_s": 6.057528368794326,
+      "close_10pct_s": 5.699851485148514,
+      "fault": 0
+    },
+    "speedup_open": 1.6816218528561013,
+    "speedup_close": 3.0182659317435254
+  },
+  "T3_lap": {
+    "lap_s": 98.5,
+    "open_pct_straights": 25.773195876288657,
+    "open_pct_braking_and_corners": 40.0,
+    "openings_per_lap": 4,
+    "temp_range_C": [
+      44.5,
+      87.0
+    ],
+    "events_last_lap": [
+      {
+        "t_in_lap_s": 0.01,
+        "event": "open"
+      },
+      {
+        "t_in_lap_s": 3.81,
+        "event": "close"
+      },
+      {
+        "t_in_lap_s": 32.36,
+        "event": "open"
+      },
+      {
+        "t_in_lap_s": 43.21,
+        "event": "close"
+      },
+      {
+        "t_in_lap_s": 72.06,
+        "event": "open"
+      },
+      {
+        "t_in_lap_s": 83.51,
+        "event": "close"
+      },
+      {
+        "t_in_lap_s": 92.11,
+        "event": "open"
+      }
+    ],
+    "fault": 0,
+    "car_model_openings_per_lap": 3,
+    "car_model_open_pct_of_lap": 19.796954314720814,
+    "rig_open_pct_of_lap": 32.48730964467005,
+    "rig_vs_car_open_state_agreement_pct": 87.30964467005076,
+    "rig_vs_car_angle_rms_deg": 28.78593274750281
+  },
+  "T5_faults": {
+    "tc_open": {
+      "fault_raised_at_s": 8.009,
+      "heater_after_fault_pct": 0.0,
+      "heat_refused_while_latched": true,
+      "heater_after_reset_pct": 30.0,
+      "messages": [
+        [
+          0.01,
+          "# SMA rig firmware rev A ready"
+        ],
+        [
+          2.01,
+          "# ok"
+        ],
+        [
+          5.02,
+          "# ok"
+        ],
+        [
+          8.02,
+          "# FAULT: heater latched off, fan 100 %"
+        ],
+        [
+          14.02,
+          "# refused: fault latched, send RESET"
+        ],
+        [
+          16.02,
+          "# ok"
+        ],
+        [
+          18.01,
+          "# ok"
+        ]
+      ]
+    },
+    "over_temperature": {
+      "scenario": "blower off, lamp 100 %",
+      "trip_at_s": 8.509,
+      "tc1_at_trip_C": 111.5,
+      "peak_tc1_C": 119.5,
+      "heater_after_trip_pct": 0.0,
+      "fan_after_trip_pct": 100.0,
+      "messages": [
+        [
+          0.01,
+          "# SMA rig firmware rev A ready"
+        ],
+        [
+          2.01,
+          "# ok"
+        ],
+        [
+          5.02,
+          "# ok"
+        ],
+        [
+          8.52,
+          "# FAULT: heater latched off, fan 100 %"
+        ]
+      ]
+    }
+  },
+  "T4_endurance": {
+    "cycles": 1000,
+    "cycle": "HOLD 90 C for 10 s, COOL, blower 20 % between",
+    "rig_time_h": 6.945833333333334,
+    "twin_wall_time_s": 26.11172127723694,
+    "telemetry_lines": 500199,
+    "telemetry_gap_max_ms": 59.0,
+    "telemetry_gap_min_ms": 41.0,
+    "faults": 0,
+    "peak_stroke_min_mm": 15.245,
+    "peak_stroke_max_mm": 15.342,
+    "closed_stroke_max_mm": -0.013,
+    "cycles_fully_open": 1000,
+    "cycles_fully_closed": 1000
+  }
+}

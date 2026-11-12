@@ -1,4 +1,4 @@
-﻿# F1 Thermo-Kinetic Adaptive Brake Duct
+# F1 Thermo-Kinetic Adaptive Brake Duct
 
 A passive brake-duct louver system driven by a Nitinol shape-memory spring.
 Everything here was built and solved on this PC with SOLIDWORKS 2025 SP05 and
@@ -14,6 +14,7 @@ ANSYS Student 2026 R1 (Fluent and MAPDL), driven from Python.
 | 2. CFD, Case B (straight) | Fluent 2026 R1 | 300 km/h, 400 C rotor, louvers open (515,700 cells). Wire settles at 306-311 K for any emissivity, below Mf 318 K: **closes**. |
 | 3. Structure | MAPDL 2026 R1 | Original spring: 86.2 deg / 14.85 mm at 85 C. Recommended six-spring NiTiCu pack: 88.5 deg / 15.15 mm at 76 C. All stress checks pass FoS 2.5 in both (lowest 3.3). |
 | 4. Bench | Python DAQ logger | Logger verified at 20 Hz on a simulated signal only. No DAQ hardware was connected. |
+| 6. Bench rig (virtual) | SOLIDWORKS, KiCad 10, arduino-cli, MSVC | Rig CAD (0 interferences), Arduino shield (ERC/DRC clean, Gerbers), firmware (57 % flash, 55 % RAM) and a digital twin running the same firmware code. Twin: 11.5 °C hysteresis on a slow ramp, thin wire closes 3x faster, rig reproduces the car lap's 3 openings (87 % agreement). Not built yet. See `docs/RIG.md`. |
 | 5. Report | ReportLab | 6-page whitepaper PDF built from the files above. |
 
 ## What the results mean
@@ -162,6 +163,10 @@ ANSYS Student 2026 R1 (Fluent and MAPDL), driven from Python.
 * The hot-case stress model keeps the louver in its closed pose and rotates
   the loads into it.
 * The bench data file is SIMULATED and is labelled as such everywhere.
+* The bench rig exists only as CAD, a PCB design, compiled firmware and a
+  digital twin. Its results are predictions. The lamp irradiance, blower
+  curve and the twin's heat-transfer assumptions must be calibrated on real
+  hardware.
 * The -18.4 % drag figure in the brief is not reproduced. The isolated-wheel
   CFD gives about -1.3 %, with a stationary wheel, slip ground and steady
   RANS (continuity residual ~2-5e-2 because of the unsteady wheel wake).
@@ -196,6 +201,9 @@ like two ANSYS sessions starting together):
 4. `phase4_bench_validation.py --port COMx` with a real DAQ board, or
    `--simulate --no-live` for a dry run
 5. `phase5_generate_whitepaper.py`
+6. Bench rig: `rig_cad.py` (SOLIDWORKS), `electronics/make_schematic.py` then
+   `electronics/make_pcb.py` (KiCad's Python), `firmware/gen_lap_profile.py`,
+   compile `firmware/sma_rig` with arduino-cli, build `firmware/host/rig_core.dll`
+   with MSVC, then `firmware/twin/rig_campaign.py`. Details in `docs/RIG.md`.
 
-The scripts read and write inside the repo folder (override with the `F1_ROOT` environment variable).
-
+The scripts read and write inside the repo folder (override with the `F1_ROOT` environment variable). KiCad scripts look for KiCad in `KICAD_DIR` (default `C:\Program Files\KiCad\10.0`).

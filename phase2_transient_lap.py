@@ -160,16 +160,43 @@ def xi_cool(T, xi0):
 tw = np.empty_like(t)
 xi = np.empty_like(t)
 tw[0], xi[0] = 305.0, 1.0
-branch, xi_rev = "cool", 1.0                     # reversal-point bookkeeping for partial loops
+# Partial-loop bookkeeping. XI_MODEL=returnpoint (default): a reversal re-anchors the new branch through the
+# present (T, xi) only if the branch being left transformed material, so ripple inside the dead band returns to
+# the same curve (return-point memory). XI_MODEL=legacy: the original rule, which re-applies the full
+# Liang-Rogers factor at every heating/cooling sign change and ratchets xi down under temperature ripple.
+XI_MODEL = os.environ.get("XI_MODEL", "returnpoint")
+branch, xi_rev = "cool", 1.0
+h_scale, c_scale, xi_start = 1.0, 0.0, 1.0
+
+
+def g_heat(T):
+    return xi_heat(T, 1.0)
+
+
+def g_cool(T):
+    return xi_cool(T, 0.0)
+
+
 for i in range(1, len(t)):
     T0 = tw[i - 1]
     q = EPS_W * G_t[i - 1] / 4 - EPS_W * SIGMA * T0 ** 4 - h_cyl(0.5 * (T0 + T_AIR), U_t[i - 1]) * (T0 - T_AIR)
     heating = q > 0
-    if heating and branch == "cool":
-        branch, xi_rev = "heat", xi[i - 1]
-    elif not heating and branch == "heat":
-        branch, xi_rev = "cool", xi[i - 1]
-    f = (lambda T: xi_heat(T, xi_rev)) if branch == "heat" else (lambda T: xi_cool(T, xi_rev))
+    if heating != (branch == "heat"):
+        if XI_MODEL == "legacy":
+            xi_rev = xi[i - 1]
+        elif abs(xi[i - 1] - xi_start) > 1e-6:
+            if heating:
+                g = g_heat(T0)
+                h_scale = xi[i - 1] / g if g > 1e-9 else 0.0
+            else:
+                g = g_cool(T0)
+                c_scale = (1 - xi[i - 1]) / (1 - g) if g < 1 - 1e-9 else 0.0
+        branch = "heat" if heating else "cool"
+        xi_start = xi[i - 1]
+    if XI_MODEL == "legacy":
+        f = (lambda T: xi_heat(T, xi_rev)) if branch == "heat" else (lambda T: xi_cool(T, xi_rev))
+    else:
+        f = (lambda T: h_scale * g_heat(T)) if branch == "heat" else (lambda T: 1 - c_scale * (1 - g_cool(T)))
     dxdT = (f(T0 + 0.05) - f(T0 - 0.05)) / 0.1
     cp_eff = CP_W + DH * abs(dxdT)
     tw[i] = T0 + DT * q / (RHO_W * cp_eff * D_W / 4)
@@ -219,6 +246,13 @@ summary = dict(alloy=ALLOY, wire_d_mm=D_W * 1000, transformation_C=dict(As=AS - 
 
 tag = f"{ALLOY}_Af{AF - 273.15:g}_gap{GAP_MM:g}_eps{EPS_W:g}_d{D_W * 1000:g}"
 os.makedirs(os.path.join(ROOT, "cfd", "transient"), exist_ok=True)
+# spring environment over the last lap (feeds the bench rig's LAP profile)
+step = int(round(0.5 / DT))
+json.dump({"tag": tag, "dt_s": step * DT, "t_s": [round(float(x), 2) for x in tl[::step]],
+           "G_W_m2": [round(float(x), 1) for x in G_t[L][::step]], "U_m_s": [round(float(x), 3) for x in U_t[L][::step]],
+           "T_air_K": T_AIR, "wire_K": [round(float(x), 2) for x in twL[::step]],
+           "angle_deg": [round(float(x), 2) for x in angL[::step]]},
+          open(os.path.join(ROOT, "cfd", "transient", f"spring_env_{tag}.json"), "w"))
 json.dump(summary, open(os.path.join(ROOT, "cfd", "transient", f"lap_{tag}.json"), "w"), indent=2)
 
 fig, ax = plt.subplots(4, 1, figsize=(13, 11), dpi=150, sharex=True)

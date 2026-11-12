@@ -34,6 +34,10 @@ class Assy:
         self.mates = []
 
     def insert(self, path, xyz=(0, 0, 0)):
+        # the part must be loaded for AddComponent5 to succeed when it was not built in this session
+        err, warn = byref_long(), byref_long()
+        self.sw.app.OpenDoc6(path, 1, 1, "", err, warn)
+        self.sw.app.ActivateDoc3(get(self.doc, "GetTitle"), False, 0, byref_long())
         comp = call(self.doc, "AddComponent5", path, 0, "", False, "", float(xyz[0]), float(xyz[1]), float(xyz[2]))
         if comp is None:
             raise RuntimeError(f"insert failed: {path}")
@@ -127,6 +131,7 @@ def comp_origin(comp):
 
 def main():
     sw = SW()
+    sw.app.CloseAllDocuments(True)
     sw.close_if_open(ASSY)
     a = Assy(sw)
     zone = a.insert(os.path.join(OUT, "F1_Brake_Packaging_Zone.SLDPRT"))
@@ -173,6 +178,30 @@ def main():
         pin = a.cyl_faces(lv, CPIN_R)[0][0]
         a.mate(f"Rod_Link{k + 1}_Concentric", MATE_CONCENTRIC, ALIGN_CLOSEST, uniq[k][0], pin)
     a.rebuild()
+    # A plane-to-plane distance mate can solve on either side of the housing, and the concentric
+    # mates only align axes, so check the rod really sits on the crank pins (+Z) and flip if not.
+    dist_mate = None
+    feat = get(a.doc, "FirstFeature")
+    while feat is not None:
+        if get(feat, "GetTypeName2") == "MateGroup":
+            sub = get(feat, "GetFirstSubFeature")
+            while sub is not None:
+                if get(sub, "GetTypeName2") == "MateDistanceDim":
+                    dist_mate = sub
+                sub = get(sub, "GetNextSubFeature")
+        feat = get(feat, "GetNextFeature")
+    for attempt in range(3):
+        z = comp_origin(rod)[2]
+        print(f"rod origin z = {z * 1000:.2f} mm (target {ROD_Z * 1000:.2f})")
+        if abs(z - ROD_Z) < 1e-5:
+            break
+        if attempt == 2 or dist_mate is None:
+            raise RuntimeError("rod could not be placed on the crank-pin side")
+        data = get(dist_mate, "GetDefinition")
+        data.FlipDimension = not data.FlipDimension            # solve the distance on the other side
+        if not call(dist_mate, "ModifyDefinition", data, a.doc, nothing()):
+            raise RuntimeError("could not flip the rod distance mate")
+        a.rebuild()
 
     # ---- kinematic verification with a temporary angle mate on louver 1 ----
     results = {}
@@ -210,7 +239,8 @@ def main():
     a.ext.SaveAs(os.path.join(OUT, "Phase1_ThermoKinetic_Assembly.png"), 0, 3, nothing(), errv, warnv)
     report = {"assembly": ASSY, "mates": a.mates, "rod_origin_mm": {str(k): [v * 1000 for v in val]
                                                                      for k, val in results.items()},
-              "stroke_80deg_mm": stroke80, "lateral_80deg_mm": lateral80}
+              "stroke_80deg_mm": stroke80, "lateral_80deg_mm": lateral80,
+              "rod_z_mm": comp_origin(rod)[2] * 1000}
     with open(os.path.join(OUT, "phase1_assembly.json"), "w") as fh:
         json.dump(report, fh, indent=2)
     print("mates:", sum(m["ok"] for m in a.mates), "OK of", len(a.mates))

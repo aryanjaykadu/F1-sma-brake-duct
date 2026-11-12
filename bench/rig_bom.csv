@@ -1,0 +1,22 @@
+item,qty,part,spec,where it is,indicative_price_INR_each
+1,1,Arduino Uno R3,ATmega328P 5 V (clone acceptable),electronics box,450-900
+2,1,Sensor shield PCB rev A,2-layer 68.6 x 53.3 mm FR4 1.6 mm (electronics/kicad/sma_rig_shield_gerbers.zip),on the Uno,300-500 for 5 boards
+3,3,MAX31855 thermocouple module,5-pin breakout (VCC GND SCK CS SO),J1-J3,350-600
+4,3,K-type thermocouple,0.25 mm bead fine-wire (TC1 on the spring) + 2 x 1.5 mm probe (TC2 air / TC3 reflector),rig,150-900
+5,1,AS5600 magnetic angle sensor,breakout + 6 x 2.5 mm diametric magnet,louver 2 free shaft end,250-400
+6,1,Load cell,5 kg bar cell 80 x 12.7 x 12.7 mm,post above the spring pack,250-400
+7,1,HX711 module,24-bit load-cell amplifier,J4,80-150
+8,1,MPXV7002DP module,+-2 kPa differential pressure + pitot tube,plenum (J6),900-1500
+9,1,92 mm 4-pin PWM fan,25 kHz PWM with tach,plenum rear,400-800
+10,1,50 mm 12 V PWM radial blower,4-wire PWM; ~13 m/s at the nozzle (calibrate),plenum lid + nozzle,500-1200
+11,1,Fan Y-splitter cable,4-pin PWM,J7 to fan + blower,80-150
+12,1,R7s halogen lamp,118 mm 500 W 230 V,U reflector,150-300
+13,1,R7s lamp holder + reflector,ceramic holder; reflector bent from 1 mm polished aluminium,heater column,300-600
+14,1,Zero-cross SSR,DC input 3-32 V; 230 VAC 10 A or more (e.g. Fotek SSR-25DA class),off-board (J9),300-600
+15,1,KSD301 thermal cut-out,normally closed 120 C 10 A in series with the lamp,reflector back,40-80
+16,1,12 V DC supply,2 A,J8,300-500
+17,6,NiTiCu SMA spring,0.5 mm wire 2.5 mm mean coil 19 active turns; Af 76 C / Mf 58 C (custom alloy: specify to supplier),spring pack,price on request
+18,1,Bias spring,steel extension spring ~1.0 N/mm 8 N preload,below the rod,50-150
+19,1,Base plate,Al 6061 305 x 245 x 10 mm,rig,1500-2500
+20,1,Printed parts,plenum + blower nozzle (ASA/PETG); duct housing + louvers in high-temp resin or machined Al near the lamp,rig,1000-2500
+21,1,Passives and connectors,shield BOM (electronics/kicad/fab/sma_rig_shield_bom.csv),shield,200-400

@@ -140,12 +140,16 @@ def parse_packet(text: str) -> Packet | None:
 class SerialTelemetry:
     source_label = "MEASURED"
 
-    def __init__(self, port: str, baud: int) -> None:
+    def __init__(self, port: str, baud: int, label: str = "MEASURED") -> None:
         if serial is None:
             raise RuntimeError("pyserial is not installed (pip install pyserial).")
         self.port = port
-        self._ser = serial.Serial()
-        self._ser.port = port
+        self.source_label = label
+        if "://" in port:          # e.g. socket://localhost:7777 for the rig digital twin
+            self._ser = serial.serial_for_url(port, do_not_open=True)
+        else:
+            self._ser = serial.Serial()
+            self._ser.port = port
         self._ser.baudrate = baud
         self._ser.timeout = 0.1
         self._ser.dtr = False      # avoid ESP32 auto-reset on open
@@ -467,6 +471,8 @@ class Recorder:
 # =============================================================================
 class Dashboard:
     def __init__(self, plt, fea, live: bool, total_s: float) -> None:
+        af = getattr(fea, "a_f", FEA_AF)
+        mf = getattr(fea, "m_f", FEA_MF)
         self.plt = plt
         self.live = live
         self.fig, (self.ax_t, self.ax_h, self.ax_f) = plt.subplots(1, 3, figsize=(20, 6.5))
@@ -807,7 +813,7 @@ def print_summary(m: dict) -> None:
         ("CSV log", m["csv"]),
     ])
     if m["data_source"] != "MEASURED":
-        print("\n  WARNING: data source is SIMULATED - this is a pipeline dry run, not physical validation.")
+        print(f"\n  WARNING: data source is {m['data_source']} - this is not physical validation.")
     print("=" * 100)
 
 
@@ -830,6 +836,14 @@ def parse_args(argv=None):
     parser.add_argument("--connect-timeout", type=float, default=8.0)
     parser.add_argument("--no-live", action="store_true", help="Disable the live GUI dashboard")
     parser.add_argument("--simulate", action="store_true", help="Hardware-free dry run (SIMULATED data)")
+    parser.add_argument("--source-label", default="MEASURED",
+                        help="Label for serial data, e.g. 'DIGITAL TWIN' when the port is the rig twin")
+    parser.add_argument("--as-c", type=float, default=FEA_AS, help="FEA reference austenite start [C]")
+    parser.add_argument("--af-c", type=float, default=FEA_AF, help="FEA reference austenite finish [C]")
+    parser.add_argument("--ms-c", type=float, default=FEA_MS, help="FEA reference martensite start [C]")
+    parser.add_argument("--mf-c", type=float, default=FEA_MF, help="FEA reference martensite finish [C]")
+    parser.add_argument("--stroke-max", type=float, default=FEA_STROKE_MAX_MM, help="FEA hot stroke [mm]")
+    parser.add_argument("--force-max", type=float, default=FEA_FORCE_MAX_N, help="FEA force at full stroke [N]")
     return parser.parse_args(argv)
 
 
@@ -841,7 +855,7 @@ def main(argv=None) -> int:
     import matplotlib.pyplot as plt
 
     try:
-        fea = TabulatedFEA(args.fea_csv) if args.fea_csv else LiangRogersFEA()
+        fea = TabulatedFEA(args.fea_csv) if args.fea_csv else LiangRogersFEA(args.as_c, args.af_c, args.ms_c, args.mf_c, args.stroke_max, args.force_max)
     except (OSError, ValueError) as exc:
         LOG.error("FEA reference could not be loaded: %s", exc)
         return 1
@@ -852,7 +866,7 @@ def main(argv=None) -> int:
             source = SimulatedTelemetry(args.heating_s)
         else:
             port = args.port or autodetect_port(args.baud)
-            source = SerialTelemetry(port, args.baud)
+            source = SerialTelemetry(port, args.baud, args.source_label)
         source.start()
     except Exception as exc:  # noqa: BLE001 - connection failures end the run cleanly
         LOG.error("Could not start telemetry: %s", exc)

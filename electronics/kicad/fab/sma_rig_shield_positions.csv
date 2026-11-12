@@ -1,0 +1,25 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"A1","Arduino_UNO_R3","Arduino_UNO_R3_WithMountingHoles",100.000000,-100.000000,0.000000,top
+"C1","100n","C_Disc_D5.0mm_W2.5mm_P5.00mm",114.000000,-123.500000,0.000000,top
+"C2","100n","C_Disc_D5.0mm_W2.5mm_P5.00mm",114.000000,-127.000000,0.000000,top
+"C3","47u","CP_Radial_D6.3mm_P2.50mm",125.200000,-120.500000,0.000000,top
+"D1","1N5822","D_DO-201AD_P5.08mm_Vertical_AnodeUp",90.000000,-133.000000,0.000000,top
+"D2","LED","LED_D3.0mm",131.000000,-127.000000,0.000000,top
+"J1","TC1 MAX31855 (spring)","PinSocket_1x05_P2.54mm_Vertical",90.000000,-104.000000,0.000000,top
+"J2","TC2 MAX31855 (air)","PinSocket_1x05_P2.54mm_Vertical",98.000000,-104.000000,0.000000,top
+"J3","TC3 MAX31855 (heater)","PinSocket_1x05_P2.54mm_Vertical",106.000000,-104.000000,0.000000,top
+"J4","HX711 load cell","PinSocket_1x04_P2.54mm_Vertical",114.000000,-104.000000,0.000000,top
+"J5","AS5600 angle","PinHeader_1x04_P2.54mm_Vertical",120.000000,-104.000000,0.000000,top
+"J6","MPXV7002 pitot","PinHeader_1x03_P2.54mm_Vertical",126.000000,-104.000000,0.000000,top
+"J7","Fan 4-pin","PinHeader_1x04_P2.54mm_Vertical",132.000000,-109.000000,0.000000,top
+"J8","12V in","TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal",116.000000,-138.500000,0.000000,top
+"J9","Heater SSR input","TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal",128.000000,-138.500000,0.000000,top
+"Q1","2N7000","TO-92_Inline",124.000000,-127.000000,0.000000,top
+"R1","4k7","R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",90.000000,-120.000000,0.000000,top
+"R2","4k7","R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",90.000000,-123.500000,0.000000,top
+"R3","10k","R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",90.000000,-127.000000,0.000000,top
+"R4","1k","R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",102.000000,-120.000000,0.000000,top
+"R5","100","R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",102.000000,-123.500000,0.000000,top
+"R6","100k","R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",102.000000,-127.000000,0.000000,top
+"R7","1k","R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",114.000000,-120.000000,0.000000,top
+"SW1","START","SW_PUSH_6mm",103.500000,-131.000000,0.000000,top
