@@ -1,0 +1,31 @@
+{
+ "theta_deg": 80.0,
+ "spring_len_mm": [
+  50.00008586102717,
+  33.99991413897283
+ ],
+ "interferences": [],
+ "components": [
+  "Brake_Duct_Housing",
+  "Nitinol_Louver_Flap",
+  "Nitinol_Louver_Flap",
+  "Nitinol_Louver_Flap",
+  "Nitinol_Louver_Flap",
+  "Control_Linkage_Rod",
+  "Rod_Crosshead",
+  "Spring_Bracket_Top",
+  "Spring_Bracket_Bottom",
+  "Inlet_Flange",
+  "SMA_Spring_NiTiCu_0p5",
+  "SMA_Spring_NiTiCu_0p5",
+  "SMA_Spring_NiTiCu_0p5",
+  "SMA_Spring_NiTiCu_0p5",
+  "SMA_Spring_NiTiCu_0p5",
+  "SMA_Spring_NiTiCu_0p5",
+  "Bias_Spring_Steel",
+  "Screw_M3x10",
+  "Screw_M3x10",
+  "Screw_M3x10",
+  "Screw_M3x10"
+ ]
+}

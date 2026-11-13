@@ -14,8 +14,9 @@ ANSYS Student 2026 R1 (Fluent and MAPDL), driven from Python.
 | 2. CFD, Case B (straight) | Fluent 2026 R1 | 300 km/h, 400 C rotor, louvers open (515,700 cells). Wire settles at 306-311 K for any emissivity, below Mf 318 K: **closes**. |
 | 3. Structure | MAPDL 2026 R1 | Original spring: 86.2 deg / 14.85 mm at 85 C. Recommended six-spring NiTiCu pack: 88.5 deg / 15.15 mm at 76 C. All stress checks pass FoS 2.5 in both (lowest 3.3). |
 | 4. Bench | Python DAQ logger | Logger verified at 20 Hz on a simulated signal only. No DAQ hardware was connected. |
-| 6. Bench rig (virtual) | SOLIDWORKS, KiCad 10, arduino-cli, MSVC | Rig CAD (0 interferences), Arduino shield (ERC/DRC clean, Gerbers), firmware (57 % flash, 55 % RAM) and a digital twin running the same firmware code. Twin: 11.5 °C hysteresis on a slow ramp, thin wire closes 3x faster, rig reproduces the car lap's 3 openings (87 % agreement). Not built yet. See `docs/RIG.md`. |
 | 5. Report | ReportLab | 6-page whitepaper PDF built from the files above. |
+| 6. Bench rig (virtual) | SOLIDWORKS, KiCad 10, arduino-cli, MSVC | Rig CAD (0 interferences), Arduino shield (ERC/DRC clean, Gerbers), firmware (57 % flash, 55 % RAM) and a digital twin running the same firmware code. Twin: 11.5 °C hysteresis on a slow ramp, thin wire closes 3x faster, rig reproduces the car lap's 3 openings (87 % agreement). Not built yet. See `docs/RIG.md`. |
+| 7. Product package | SOLIDWORKS, KiCad, ReportLab | Production-detail module CAD with real coil springs (0 interferences), actuation animation, A3 drawing SMA-DM-001 with parts list, 1-page product sheet, rig with the shield PCB in 3D. See `docs/PRODUCT.md`. |
 
 ## What the results mean
 

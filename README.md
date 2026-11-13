@@ -9,7 +9,11 @@ I modelled the mechanism in SOLIDWORKS, ran thermal and aero CFD in ANSYS
 Fluent, checked the structure in ANSYS MAPDL, and tested the actuator
 behaviour over a simulated lap.
 
-![Assembly](cad/Phase1_ThermoKinetic_Assembly.png)
+![Actuation](cad/product/SMA_Duct_Module_actuation.gif)
+
+Product package: [one-page product sheet](report/SMA_Duct_Module_Product_Sheet.pdf),
+[assembly drawing SMA-DM-001](cad/product/SMA-DM-001.pdf),
+[design notes](docs/PRODUCT.md).
 
 ## What I found
 
@@ -66,6 +70,23 @@ Details are in [docs/RIG.md](docs/RIG.md).
 
 ![Bench rig](cad/rig/Bench_Rig_iso.png)
 
+## Product package
+
+The actuator is also detailed as a product:
+- **Module CAD:** production-level detail, including real helical NiTiCu
+  springs with a black coating, a steel bias spring, anodised brackets and an
+  inlet flange with M3 fasteners. 21 components, zero interferences.
+- **Animation:** the springs genuinely stretch and contract as the louvers
+  open and close.
+- **Drawing:** A3 assembly drawing SMA-DM-001 with a parts list.
+- **Product sheet:** one-page summary.
+- **Rig CAD:** the bench rig now carries the real 3D circuit board exported
+  from KiCad.
+
+See [docs/PRODUCT.md](docs/PRODUCT.md).
+
+![Product sheet preview](cad/product/Module_trimetric.png)
+
 ## Limits (read before quoting numbers)
 
 - ANSYS Student licence: meshes are capped at 1M cells, so the CFD is coarse.
@@ -98,7 +119,8 @@ All CAD and simulation runs are driven from the Python scripts in this repo.
 | `phase3_fea.py` | MAPDL linkage and stress model |
 | `phase4_bench_validation.py` | DAQ logger (only run in simulation) |
 | `phase5_generate_whitepaper.py` | Builds the PDF from the result files |
-| `rig_cad.py` | SOLIDWORKS bench rig parts and assembly |
+| `rig_cad.py`, `rig_import_pcb.py` | SOLIDWORKS bench rig parts and assembly, shield PCB import |
+| `product_*.py` | Product module CAD, animation, drawing and product sheet |
 | `electronics/` | KiCad shield: schematic and PCB generators, Gerbers, BOM |
 | `firmware/` | Arduino firmware, lap-profile generator, digital twin and test campaign |
 | `cad/`, `cfd/`, `fea/`, `bench/`, `report/` | Models, plots and result JSON |

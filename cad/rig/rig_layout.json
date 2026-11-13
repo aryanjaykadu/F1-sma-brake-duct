@@ -29,7 +29,7 @@
    ]
   },
   "Rig_Fan_Plenum": {
-   "Combine1": [
+   "Combine4": [
     98.0,
     80.0,
     -50.0,
@@ -47,22 +47,6 @@
    ]
   },
   "Rig_Fan_92mm": {
-   "fan_stand": [
-    160.0,
-    -0.0,
-    -40.0,
-    181.0,
-    94.0,
-    40.0
-   ],
-   "blower_50mm": [
-    95.0,
-    200.0,
-    25.0,
-    110.0,
-    250.0,
-    50.0
-   ],
    "Combine1": [
     158.0,
     94.0,
@@ -86,17 +70,25 @@
     181.0,
     159.0,
     19.0
+   ],
+   "fan_stand": [
+    160.0,
+    -0.0,
+    -40.0,
+    181.0,
+    94.0,
+    40.0
+   ],
+   "blower_50mm": [
+    95.0,
+    200.0,
+    25.0,
+    110.0,
+    250.0,
+    50.0
    ]
   },
   "Rig_SMA_Spring_Pack": {
-   "hook": [
-    64.84,
-    250.0,
-    35.0,
-    67.84,
-    262.0,
-    38.0
-   ],
    "crosshead": [
     54.0,
     190.0,
@@ -160,6 +152,14 @@
     79.0,
     250.0,
     39.0
+   ],
+   "hook": [
+    64.84,
+    250.0,
+    35.0,
+    67.84,
+    262.0,
+    38.0
    ]
   },
   "Rig_Load_Cell": {
@@ -199,14 +199,6 @@
    ]
   },
   "Rig_IR_Heater": {
-   "heat_shield": [
-    30.0,
-    150.0,
-    46.0,
-    96.0,
-    192.0,
-    48.0
-   ],
    "Combine1": [
     44.0,
     155.0,
@@ -230,6 +222,14 @@
     75.0,
     155.0,
     73.0
+   ],
+   "heat_shield": [
+    30.0,
+    150.0,
+    46.0,
+    96.0,
+    192.0,
+    48.0
    ]
   },
   "Rig_Angle_Sensor": {
@@ -285,22 +285,6 @@
    ]
   },
   "Rig_Electronics_Box": {
-   "arduino_uno": [
-    173.0,
-    6.0,
-    52.0,
-    241.6,
-    7.6,
-    105.4
-   ],
-   "sensor_shield": [
-    173.0,
-    20.0,
-    52.0,
-    241.6,
-    21.6,
-    105.4
-   ],
    "Combine1": [
     165.0,
     0.0,
@@ -308,9 +292,2517 @@
     250.0,
     45.0,
     115.0
+   ],
+   "arduino_uno": [
+    173.0,
+    6.0,
+    52.0,
+    241.6,
+    7.6,
+    105.4
    ]
   }
  },
- "interferences": [],
+ "interferences": [
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_via.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_PCB.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/SW_PUSH_6mm.step-1/SW_PUSH_6mm-4.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_pad.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  },
+  {
+   "components": [
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/sma_rig_shield_copper.step-1",
+    "Sensor_Shield_PCB-1/sma_rig_shield.step-1/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal.step-2/TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal-2.step-1"
+   ],
+   "volume_mm3": 0.0
+  }
+ ],
  "assembly": "C:\\Temp\\F1_BrakeDuct\\cad\\rig\\Bench_Rig.SLDASM"
 }

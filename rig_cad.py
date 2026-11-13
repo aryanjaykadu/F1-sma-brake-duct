@@ -86,10 +86,31 @@ def cyl(p, axis, c, r, a0, a1, name):
 
 
 def subtract(p, main, tools, what):
-    p.doc.ClearSelection2(True)
-    if call(p.fm, "InsertCombineFeature", SWBODYCUT, main, disp_array(tools)) is None:
-        raise RuntimeError(f"cut failed: {what}")
-    p.rebuild()
+    """Cut tools from main one at a time (a multi-tool combine silently skips some tools)."""
+    def bbox(b):
+        return [round(v, 9) for v in get(b, "GetBodyBox")]
+
+    box0 = bbox(main)
+    tool_boxes = [bbox(t) for t in tools]          # body pointers go stale after each combine
+    for k, tb in enumerate(tool_boxes):
+        found = [b for b in p.bodies() if bbox(b) == tb]
+        if not found:                              # already consumed by an earlier combine
+            continue
+        tool = found[0]
+        main = [b for b in p.bodies() if bbox(b) == box0][0]
+        p.doc.ClearSelection2(True)
+        if call(p.fm, "InsertCombineFeature", SWBODYCUT, main, disp_array([tool])) is None:
+            raise RuntimeError(f"cut failed: {what} (tool {k})")
+        p.rebuild()
+        # the combined body replaces main: find it again by its bounding box
+        cands = [b for b in p.bodies() if bbox(b) == box0]
+        if not cands:
+            raise RuntimeError(f"{what}: main body lost after tool {k}")
+        main = cands[0]
+    left = [k for k, tb in enumerate(tool_boxes) if any(bbox(b) == tb for b in p.bodies())]
+    if left:
+        raise RuntimeError(f"{what}: tool bodies {left} were not subtracted")
+    return main
 
 
 def colour(p, rgb):
@@ -185,8 +206,7 @@ def electronics(p):
     shell = box(p, 165, 250, 0, 45, 45, 115, "enclosure")
     inner = box(p, 167.5, 247.5, 2.5, 50, 47.5, 112.5, "cavity")
     subtract(p, shell, [inner], "enclosure")
-    box(p, 173, 241.6, 6, 7.6, 52, 105.4, "arduino_uno")
-    box(p, 173, 241.6, 20, 21.6, 52, 105.4, "sensor_shield")
+    box(p, 173, 241.6, 6, 7.6, 52, 105.4, "arduino_uno")       # the shield itself is the KiCad 3D model
     return (0.15, 0.3, 0.6)
 
 
@@ -230,13 +250,19 @@ def main():
         paths.append((path, ROT_ID, (0, 0, 0)))
     for name, rot, t in P1_PARTS:
         paths.append((os.path.join(P1, name + ".SLDPRT"), rot, t))
+    # KiCad 3D model of the shield (rig_import_pcb.py): board XY -> rig XZ, board up -> rig +Y,
+    # board bottom at y = 20 mm on the Uno, outline matched to the Uno placeholder footprint
+    pcb = json.load(open(os.path.join(OUT, "pcb_import.json")))
+    bx = pcb["box_mm"]
+    paths.append((os.path.join(OUT, os.path.basename(pcb["path"])), (1, 0, 0, 0, 0, -1, 0, 1, 0),
+                  (173 - bx[0], 20.0, 52 + bx[4])))
 
     asm_path = os.path.join(OUT, "Bench_Rig.SLDASM")
     sw.close_if_open(asm_path)
     doc = sw.new_assembly()
     for path, rot, t in paths:
         err, warn = byref_long(), byref_long()
-        sw.app.OpenDoc6(path, 1, 1, "", err, warn)          # load the part so the insert is instant
+        sw.app.OpenDoc6(path, 2 if path.upper().endswith(".SLDASM") else 1, 1, "", err, warn)   # load first
         sw.app.ActivateDoc3(get(doc, "GetTitle"), False, 0, byref_long())
         comp = call(doc, "AddComponent5", path, 0, "", False, "", 0.0, 0.0, 0.0)
         if comp is None:
@@ -264,6 +290,8 @@ def main():
         res = get(idm, "GetInterferences") or ()
         for it in res:
             comps = [get(c, "Name2") for c in (get(it, "Components") or ())]
+            if all(c.startswith("Sensor_Shield_PCB") for c in comps):
+                continue                      # vias/pads touching the board inside the imported KiCad model
             clashes.append({"components": comps, "volume_mm3": round(get(it, "Volume") * 1e9, 1)})
         idm.Done()
     except Exception as exc:  # noqa: BLE001
