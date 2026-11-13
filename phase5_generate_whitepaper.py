@@ -14,7 +14,7 @@ Data provenance rules
       fea/phase3_results.json                      (Phase 3 FEA)
       bench/Phase4_Correlation_Summary.json        (Phase 4 bench correlation)
       bench/Phase4_Bench_Test_Data.csv             (Phase 4 raw DAQ log)
-      cfd/wheel/wheel_aero_open_vs_closed.json     (drag delta)
+      cfd/wheel/wheel_mesh_independence.json       (drag study)
 * Values from the project brief that no file supports are shown as
   DESIGN TARGET. Bench data recorded with --simulate is shown as SIMULATED.
 * A SolidWorks .SLDPRT cannot be embedded in a PDF. The packaging and
@@ -515,9 +515,10 @@ class Context:
     def kpis(self):
         p4 = self.phase4 or {}
         src4 = self.bench_source
-        items = [("Aero Drag Delta (straights)", "-1.3 %",
-                  "Isolated-wheel Fluent, 300 km/h, closed vs open (~770k cells). Brief target -18.4 % "
-                  "not supported: the duct carries only ~1 % of the wheel's drag.", "FLUENT 2026 R1")]
+        items = [("Aero Drag Delta (straights)", "max 1.4 %",
+                  "Momentum limit of the duct flow, isolated wheel at 300 km/h, 3 meshes (284k-768k cells). "
+                  "Direct CFD difference is within solver noise; brief target -18.4 % ruled out.",
+                  "FLUENT 2026 R1")]
         if p4.get("onset_temp_C") is not None:
             items.append(("Actuation Trigger", fmt(p4["onset_temp_C"], ".1f", " °C"),
                           f"Measured onset at {fmt(p4.get('onset_threshold_mm'), '.2f')} mm stroke threshold.", src4))
@@ -848,14 +849,14 @@ def page6(doc, st, ctx: Context):
                            f"{fmt(p4.get('hysteresis_width_C'), '.1f')} °C.")
     else:
         conclusions.append("Physical correlation is pending a Phase 4 bench run.")
-    conclusions.append("The -18.4 % straight-line drag reduction is not supported. In an isolated-wheel Fluent "
-                       "model at 300 km/h (wheel, cover, rotor, duct with forward scoop, about 770k cells), closing "
-                       "the louvers lowers total drag from 1,183 N to 1,168 N (mean of the last 200 iterations): "
-                       "-1.3 %, of the same order as the +/-6 to 13 N iteration-to-iteration oscillation. Throat "
-                       "flow falls only 16 % (0.155 to 0.130 kg/s). Even a fully sealed duct could save at most "
-                       "its momentum drag, about 0.155 kg/s x 83 m/s = 13 N, or 1.1 % of the wheel's drag. The "
-                       "absolute Cd (1.29-1.31) is high because the wheel is stationary on a slip ground and the "
-                       "mesh is limited to 1M cells, but the open-closed difference shares those errors.")
+    conclusions.append("The -18.4 % straight-line drag reduction is ruled out. An isolated-wheel Fluent model at "
+                       "300 km/h (wheel, cover, rotor, duct with forward scoop) was solved on three meshes (284k, "
+                       "408k and 768k cells). The direct open-vs-closed difference (-9.6 %, +5.2 %, -1.3 %) changes "
+                       "sign between meshes and stays inside the iteration noise of the unsteady wheel wake; the "
+                       "duct's own drag changes by only 1-2 N. The robust result is the momentum limit: a sealed "
+                       "duct can save at most its mass flow times speed, 13-15 N or 1.1-1.4 % of total drag on "
+                       "every mesh. Resolving the actual difference needs time-averaged transient CFD with a "
+                       "rotating wheel and a finer mesh than the Student licence allows.")
 
     fia = (
         "The brief cites Article 3.10 (Aerodynamic Influence). The Formula 1 Technical Regulations require that "

@@ -15,7 +15,8 @@ import ansys.fluent.core as pyfluent
 D = PROJECT_ROOT + r"\cfd\wheel"
 VARIANT = os.environ.get("VARIANT", "Closed")
 NAME = f"Wheel_Aero_{VARIANT}"
-GEOM, MESH = os.path.join(D, NAME + ".x_t"), os.path.join(D, NAME + ".msh.h5")
+TAG = os.environ.get("MESH_TAG", "")              # e.g. _coarse / _medium for the mesh-independence study
+GEOM, MESH = os.path.join(D, NAME + ".x_t"), os.path.join(D, NAME + TAG + ".msh.h5")
 SIZES = {"louver": float(os.environ.get("S_LOUVER", "1.5")), "duct": float(os.environ.get("S_DUCT", "4")),
          "body": float(os.environ.get("S_BODY", "12"))}
 MAX_SIZE = float(os.environ.get("MAX_SIZE", "100"))

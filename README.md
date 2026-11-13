@@ -11,6 +11,9 @@ behaviour over a simulated lap.
 
 ![Actuation](cad/product/SMA_Duct_Module_actuation.gif)
 
+**Start here:** [Project Guidebook (PDF)](report/Project_Guidebook.pdf), which covers the problem, how it works, every
+phase, tools, results and limits. A web version is in [docs/GUIDEBOOK.md](docs/GUIDEBOOK.md).
+
 Product package: [one-page product sheet](report/SMA_Duct_Module_Product_Sheet.pdf),
 [assembly drawing SMA-DM-001](cad/product/SMA-DM-001.pdf),
 [design notes](docs/PRODUCT.md).
@@ -26,11 +29,16 @@ Product package: [one-page product sheet](report/SMA_Duct_Module_Product_Sheet.p
 | Does the specified 1.2 mm NiTi spring work over a lap? | No. It is too slow to heat and its hysteresis is too wide | `cfd/transient/` |
 | Redesign | Six 0.5 mm NiTiCu springs (Af 76 °C, Mf 58 °C). They open after the 3 hardest braking zones and are open 2 % of straight-line time | `cfd/transient/`, `fea/pack_NiTiCu/` |
 | Stresses OK? | Yes, lowest factor of safety 3.3 | MAPDL, `fea/` |
-| Does closing the louvers cut drag by 18.4 %, as the brief assumed? | **No, about 1.3 %** | Isolated-wheel Fluent, `cfd/wheel/` |
+| Does closing the louvers cut drag by 18.4 %, as the brief assumed? | **No: any saving is capped at 1.1-1.4 %, on three meshes** | Isolated-wheel Fluent mesh study, `cfd/wheel/` |
 
 The drag result is the main finding. A duct can't save more drag than the
-momentum of the air it swallows. Here that is 0.155 kg/s × 83 m/s ≈ 13 N,
-about 1 % of the wheel's drag, so no louver design gets close to 18 %.
+momentum of the air it swallows. Here that is 0.155-0.183 kg/s × 83 m/s
+≈ 13-15 N, or 1.1-1.4 % of total drag on every mesh tested, so no louver
+design gets close to 18 %. The direct CFD open-vs-closed difference
+(-9.6 %, +5.2 %, -1.3 % on 284k, 408k and 768k cells) stays within the
+solver's noise from the unsteady wheel wake, so only the limit is quoted.
+
+![Mesh-independence study](cfd/wheel/Wheel_Mesh_Independence.png)
 
 The full numbers, method and limits are in [docs/RESULTS.md](docs/RESULTS.md),
 and the write-up is in [report/ThermoKinetic_BrakeDuct_Whitepaper.pdf](report/ThermoKinetic_BrakeDuct_Whitepaper.pdf).
@@ -91,14 +99,15 @@ See [docs/PRODUCT.md](docs/PRODUCT.md).
 
 - ANSYS Student licence: meshes are capped at 1M cells, so the CFD is coarse.
 - Steady RANS. The aero model uses a stationary wheel on a slip ground, so the
-  absolute drag coefficient (~1.3) is too high. Only the open-vs-closed
-  difference is meaningful.
+  absolute drag coefficient (1.25-1.38) is too high, and the open-vs-closed
+  difference sits inside the wake noise on all three meshes. The momentum
+  limit is the result to quote.
 - The lap model is reduced-order, on a synthetic lap trace, calibrated to two
   steady Fluent cases.
 - The NiTiCu transformation temperatures are design targets, not a datasheet
   alloy.
 - **No hardware was built or tested.** The bench file in `bench/` is a
-  simulated dry run of the logging script, and the rig results in
+  simulated dry run of the data logger, and the rig results in
   `bench/virtual/` come from the digital twin, not measurements.
 - Moving aero parts are banned under the F1 technical regulations, so this
   is a research and non-FIA concept.
@@ -106,15 +115,13 @@ See [docs/PRODUCT.md](docs/PRODUCT.md).
 ## Tools
 
 SOLIDWORKS 2025, ANSYS Student 2026 R1 (Fluent, MAPDL), KiCad 10,
-arduino-cli (Arduino Uno), MSVC, Python 3.13
-(pywin32, PyFluent, PyMAPDL, gmsh, numpy, matplotlib, ReportLab, pyserial).
-All CAD and simulation runs are driven from the Python scripts in this repo.
+Arduino (Uno), C++, gmsh and Python.
 
 ## Repo layout
 
 | Path | Contents |
 |---|---|
-| `phase1_*.py`, `swlib.py` | SOLIDWORKS part and assembly build (COM API) |
+| `phase1_*.py`, `swlib.py` | SOLIDWORKS parts and assembly |
 | `phase2_*.py` | Fluent CHT domain, meshing, solves, radiation, lap model, wheel aero |
 | `phase3_fea.py` | MAPDL linkage and stress model |
 | `phase4_bench_validation.py` | DAQ logger (only run in simulation) |

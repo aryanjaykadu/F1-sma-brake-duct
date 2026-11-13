@@ -1,0 +1,17 @@
+{
+  "variant": "Closed",
+  "iterations": 600,
+  "V_m_s": 83.33333333333333,
+  "A_ref_m2": 0.21239999999999998,
+  "drag_wheel_N": 1138.35192706938,
+  "drag_cover_N": -0.211938766570523,
+  "drag_rotor_N": 0.3097946480805427,
+  "drag_duct_N": 36.54560017015078,
+  "drag_louver_N": -0.015334975255082,
+  "drag_total_N": 1174.980048145786,
+  "Cd_assembly": 1.300565947446045,
+  "throat_mass_flow_kg_s": 0.1245590199187594,
+  "scoop_mass_flow_kg_s": 0.1295663490054931,
+  "ideal_capture_kg_s": 0.6124999999999999,
+  "status": "COMPLETED"
+}

@@ -17,7 +17,8 @@ import ansys.fluent.core as pyfluent
 D = PROJECT_ROOT + r"\cfd\wheel"
 VARIANT = os.environ.get("VARIANT", "Closed")
 ITER = int(os.environ.get("ITER", "600"))
-NAME = f"Wheel_Aero_{VARIANT}"
+TAG = os.environ.get("MESH_TAG", "")              # mesh-independence level: "", _medium, _coarse
+NAME = f"Wheel_Aero_{VARIANT}{TAG}"
 V = 300 / 3.6
 RHO = 1.225
 A_REF = 0.720 * 0.295                       # wheel frontal area (OD x width) [m2]
@@ -79,7 +80,7 @@ try:
     try:
         st.solution.monitor.report_files.create("drag-hist")
         st.solution.monitor.report_files["drag-hist"].report_defs = ["drag-total", "drag-louver"]
-        st.solution.monitor.report_files["drag-hist"].file_name = os.path.join(D, f"drag_history_{VARIANT}.out")
+        st.solution.monitor.report_files["drag-hist"].file_name = os.path.join(D, f"drag_history_{VARIANT}{TAG}.out")
     except Exception as exc:  # noqa: BLE001
         print("report file not set:", exc)
     st.solution.initialization.hybrid_initialize()
@@ -136,5 +137,5 @@ except Exception as exc:  # noqa: BLE001
     print("FAILED", exc)
 finally:
     s.exit()
-json.dump(out, open(os.path.join(D, f"aero_{VARIANT}.json"), "w"), indent=2)
+json.dump(out, open(os.path.join(D, f"aero_{VARIANT}{TAG}.json"), "w"), indent=2)
 print("RESULT", json.dumps(out))

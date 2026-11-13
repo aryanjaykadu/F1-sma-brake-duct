@@ -4,13 +4,16 @@ A passive brake-duct louver system driven by a Nitinol shape-memory spring.
 Everything here was built and solved on this PC with SOLIDWORKS 2025 SP05 and
 ANSYS Student 2026 R1 (Fluent and MAPDL), driven from Python.
 
+The full walkthrough is in the Project Guidebook: `report/Project_Guidebook.pdf`
+(source `docs/GUIDEBOOK.md`, built by `make_guidebook.py`).
+
 ## Results at a glance
 
 | Phase | Tool | Outcome |
 |---|---|---|
 | 1. CAD | SOLIDWORKS 2025 | 4 parts + assembly, 16 mates solved. Louver at 80 deg moves the rod 14.000 mm. |
 | 2. CFD, Case A (braking) | Fluent 2026 R1 | Pocket air: 300.3 K beside the duct, 324.1 K on the rotor's wake face (492,211 cells): both below 358 K. With rotor radiation the spring wire reaches 378-393 K at emissivity 0.6: **opens**. |
-| 2. CFD, drag open vs closed | Fluent 2026 R1 | Isolated wheel at 300 km/h (~770k cells): closing the louvers cuts total drag by **-1.3 %** (1,183 to 1,168 N) and throat flow by 16 %. The -18.4 % target is **not supported**. |
+| 2. CFD, drag open vs closed | Fluent 2026 R1 | Isolated wheel at 300 km/h, three meshes (284k-768k cells). The direct open-vs-closed difference (-1.3 %, +5.2 %, -9.6 %) is within solver noise at every mesh, but physics caps any saving at **1.1-1.4 %** on all three. The -18.4 % target is **ruled out**. |
 | 2. CFD, Case B (straight) | Fluent 2026 R1 | 300 km/h, 400 C rotor, louvers open (515,700 cells). Wire settles at 306-311 K for any emissivity, below Mf 318 K: **closes**. |
 | 3. Structure | MAPDL 2026 R1 | Original spring: 86.2 deg / 14.85 mm at 85 C. Recommended six-spring NiTiCu pack: 88.5 deg / 15.15 mm at 76 C. All stress checks pass FoS 2.5 in both (lowest 3.3). |
 | 4. Bench | Python DAQ logger | Logger verified at 20 Hz on a simulated signal only. No DAQ hardware was connected. |
@@ -81,7 +84,7 @@ ANSYS Student 2026 R1 (Fluent and MAPDL), driven from Python.
   | Lowest FoS | 3.3 (housing holes, cold) | 3.3 (housing holes, cold) |
 
   All stress checks pass. The pack is the recommended actuator.
-* **Isolated-wheel drag: closing the louvers saves about 1 %, not 18.4 %.**
+* **Isolated-wheel drag: any saving is capped at about 1 %, not 18.4 %.**
   `phase2_wheel_cad.py` builds a 2.0 x 1.36 x 3.7 m air box in SOLIDWORKS
   around a 720 mm wheel with an outboard cover, the rotor, and the duct with
   a new forward-facing inlet scoop. `phase2_wheel_mesh.py` meshes it
@@ -100,18 +103,38 @@ ANSYS Student 2026 R1 (Fluent and MAPDL), driven from Python.
   | Cd (wheel frontal area 0.212 m2) | 1.31 | 1.29 | |
 
   The -1.3 % is the same size as the solver's oscillation, and most of it
-  shows up on the wheel itself (wake noise), not on the duct or louvers. A
-  simple upper bound backs this up. Even a fully sealed duct can save at
-  most its momentum drag: 0.155 kg/s x 83 m/s = 13 N, or 1.1 % of the
-  wheel's drag. The duct only swallows ~25 % of what its 60 x 100 mm scoop
-  could capture.
+  shows up on the wheel itself (wake noise), not on the duct or louvers.
 
-  The absolute Cd (~1.3, against ~0.6-0.8 typical for an isolated wheel) is
-  high: the wheel does not spin, the ground does not move, and the mesh is
-  capped at 1M cells. Those errors are common to both runs, so the
-  difference is more trustworthy than the absolute values. The case that
-  could still change the answer is the installed car, where the duct may
-  alter the wheel wake interacting with the floor and diffuser.
+  **Mesh-independence study** (phase2_wheel_mesh_study.py,
+  phase2_wheel_mesh_compare.py, cfd/wheel/wheel_mesh_independence.json,
+  cfd/wheel/Wheel_Mesh_Independence.png). Coarse and medium meshes scale
+  every local and global size by 1.8 and 1.35, keeping the same 5 prism
+  layers (the 1M-cell Student limit rules out a finer level):
+
+  | Mesh | Cells | Drag open | Drag closed | Change | Solver noise | Momentum limit |
+  |---|---|---|---|---|---|---|
+  | Coarse | 284k | 1,247 N | 1,128 N | -9.6 % | +/-7.4 % | 1.1 % |
+  | Medium | 408k | 1,130 N | 1,189 N | +5.2 % | +/-5.4 % | 1.4 % |
+  | Fine | 768k | 1,183 N | 1,168 N | -1.3 % | +/-1.2 % | 1.1 % |
+
+  * **The difference itself is not resolved.** It changes sign between meshes
+    and stays inside the iteration noise at every level, so the grid
+    convergence index is meaningless for it. Duct drag changes by only 1-2 N
+    between open and closed on every mesh. The total swings come from the
+    wheel's unsteady wake (-19 N, +41 N, -133 N), which steady RANS cannot
+    settle.
+  * **The bound is robust.** Even a fully sealed duct can save at most its
+    momentum drag, the duct mass flow times speed: 12.9-15.3 N, or 1.1-1.4 %
+    of total drag on all three meshes. The -18.4 % target is more than ten
+    times this limit.
+  * **Resolving the actual difference** would need time-averaged transient
+    CFD (URANS or DES), a rotating wheel on a moving ground and a finer mesh
+    than the Student licence allows.
+
+  The absolute Cd (1.25-1.38 across the meshes, against ~0.6-0.8 typical for
+  an isolated wheel) is high: the wheel does not spin, the ground does not
+  move, and the mesh is capped at 1M cells.
+
 * **Earlier duct-box drag check (superseded).** `phase2_aero.py` compares louvers
   open (Case B) and closed (`CaseB_closed`) at 300 km/h with a 400 C rotor
   (`cfd/phase2_aero_open_vs_closed.json`):
@@ -168,9 +191,10 @@ ANSYS Student 2026 R1 (Fluent and MAPDL), driven from Python.
   digital twin. Its results are predictions. The lamp irradiance, blower
   curve and the twin's heat-transfer assumptions must be calibrated on real
   hardware.
-* The -18.4 % drag figure in the brief is not reproduced. The isolated-wheel
-  CFD gives about -1.3 %, with a stationary wheel, slip ground and steady
-  RANS (continuity residual ~2-5e-2 because of the unsteady wheel wake).
+* The -18.4 % drag figure in the brief is not reproduced. Steady RANS on a
+  stationary wheel cannot resolve the open-vs-closed difference (it sits
+  inside the wake noise on all three meshes); the momentum limit caps any
+  saving at 1.1-1.4 %.
 
 ## Folder layout
 
