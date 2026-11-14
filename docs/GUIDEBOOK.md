@@ -84,7 +84,7 @@ fast.
 | Does the brief's 1.2 mm NiTi spring work over a lap? | No: it never opens, or stays stuck open |
 | Fix | Six 0.5 mm NiTiCu springs (Af 76 °C / Mf 58 °C): open after the 3 hardest braking zones, open only 2 % of straight time |
 | Is it strong enough? | Yes: all stress checks pass, lowest factor of safety 3.3 (MAPDL) |
-| Does closing the duct save 18.4 % drag? | **No: physics caps any saving at 1.1-1.4 %, confirmed on three meshes** |
+| Does closing the duct save 18.4 % drag? | **No. Physics caps any saving at 1.1-1.4 %; with a rotating wheel and moving road, closing actually adds 0.5 % drag** |
 | Is it legal in F1? | No: moving aerodynamic parts are banned |
 | Can it be tested? | A bench rig, its electronics, firmware and a digital twin are designed; the twin predicts the rig reproduces the car behaviour |
 
@@ -305,11 +305,37 @@ licence's 1 million cell limit rules out a finer level.
   `D_max ≈ ṁ V = 0.155-0.183 kg/s x 83 m/s ≈ 13-15 N`
   That is **1.1-1.4 % of the total drag on all three meshes**. The brief's
   -18.4 % is more than ten times this limit, so it is ruled out.
-* **Resolving the actual difference** would need time-averaged transient
-  CFD, a rotating wheel on a moving ground and a finer mesh.
+* **Resolving the actual difference** needs time-averaged transient CFD with
+  a rotating wheel on a moving ground (next step).
 
-The absolute drag coefficient (1.25-1.38) is high because the wheel does not
-spin and the mesh is limited.
+**Third step: rotating wheel, moving road, time-averaged.** The wheel, cover
+and disc spin at 231.5 rad/s (300 km/h on a 0.36 m tyre) and the ground
+moves at 300 km/h, as a real road does under the car. After a steady start,
+the flow is solved in 1 ms time steps and the drag is averaged over the
+settled 160 ms (fine mesh).
+
+| | Louvers open | Louvers closed |
+|---|---|---|
+| Steady drag | 1,071.8 N | 1,076.0 N |
+| Time-averaged drag (± standard error) | 1,073.5 ± 0.2 N | 1,079.2 ± 0.5 N |
+| Change on closing | | **+0.53 % (95 % interval +0.43 to +0.63 %)** |
+
+![Rotating wheel, transient drag](../cfd/wheel/Wheel_Rotating_Transient_Drag.png)
+
+* **Closing the louvers does not save drag in this model; it adds about
+  0.5 %.**
+  * The duct's own drag falls by only 0.4 N, while the wheel's drag rises by
+    more.
+  * The two drag traces stay apart for the whole averaging window, and the
+    steady runs agree on the direction (+0.4 %).
+* **Caveats:** the interval covers sampling noise only. 160 ms is about four
+  wake cycles on one mesh, and the drag coefficient (1.19) is still above
+  real-wheel values.
+
+**Conclusion of the drag study:** in every model the effect of closing the
+louvers is a fraction of a percent, within the 1.1-1.4 % physical limit. In
+the most realistic model it is a small penalty, not a saving. The brief's
+-18.4 % is ruled out.
 
 ### 5.9 Phase 7 - Product package
 
@@ -354,7 +380,7 @@ model and the twin):
 * **Student licence:** meshes are capped at 1 million cells, so the CFD is
   coarse.
   * Thermal-case continuity stalled near 1e-2.
-  * The aero cases model a stationary wheel on a slip ground.
+  * The rotating-wheel drag result is averaged over only 160 ms on one mesh.
 * **Lap model:** reduced-order, on a synthetic lap; the NiTiCu
   transformation temperatures are design targets, not a datasheet alloy.
 * **Rig assumptions:** the twin's lamp irradiance, blower curve and

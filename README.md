@@ -29,16 +29,22 @@ Product package: [one-page product sheet](report/SMA_Duct_Module_Product_Sheet.p
 | Does the specified 1.2 mm NiTi spring work over a lap? | No. It is too slow to heat and its hysteresis is too wide | `cfd/transient/` |
 | Redesign | Six 0.5 mm NiTiCu springs (Af 76 °C, Mf 58 °C). They open after the 3 hardest braking zones and are open 2 % of straight-line time | `cfd/transient/`, `fea/pack_NiTiCu/` |
 | Stresses OK? | Yes, lowest factor of safety 3.3 | MAPDL, `fea/` |
-| Does closing the louvers cut drag by 18.4 %, as the brief assumed? | **No: any saving is capped at 1.1-1.4 %, on three meshes** | Isolated-wheel Fluent mesh study, `cfd/wheel/` |
+| Does closing the louvers cut drag by 18.4 %, as the brief assumed? | **No. With a rotating wheel on a moving road, closing them adds 0.5 % drag** | Isolated-wheel Fluent, `cfd/wheel/` |
 
-The drag result is the main finding. A duct can't save more drag than the
-momentum of the air it swallows. Here that is 0.155-0.183 kg/s × 83 m/s
-≈ 13-15 N, or 1.1-1.4 % of total drag on every mesh tested, so no louver
-design gets close to 18 %. The direct CFD open-vs-closed difference
-(-9.6 %, +5.2 %, -1.3 % on 284k, 408k and 768k cells) stays within the
-solver's noise from the unsteady wheel wake, so only the limit is quoted.
+The drag result is the main finding, reached in three steps:
 
-![Mesh-independence study](cfd/wheel/Wheel_Mesh_Independence.png)
+1. **Physical limit.** A duct can't save more drag than the momentum of the
+   air it swallows: 0.155-0.183 kg/s × 83 m/s ≈ 13-15 N, or 1.1-1.4 % of
+   total drag on every mesh. So no louver design gets close to 18 %.
+2. **Mesh study, stationary wheel.** On 284k, 408k and 768k cells the
+   open-vs-closed difference (-9.6 %, +5.2 %, -1.3 %) stayed within the
+   solver noise from the unsteady wheel wake.
+3. **Rotating wheel on a moving road, time-averaged over 160 ms of transient
+   flow.** Closing the louvers *adds* 0.53 % drag (95 % interval +0.43 to
+   +0.63 %). The duct's own drag falls by 0.4 N, but the wheel's rises by
+   more.
+
+![Rotating wheel, transient drag](cfd/wheel/Wheel_Rotating_Transient_Drag.png)
 
 The full numbers, method and limits are in [docs/RESULTS.md](docs/RESULTS.md),
 and the write-up is in [report/ThermoKinetic_BrakeDuct_Whitepaper.pdf](report/ThermoKinetic_BrakeDuct_Whitepaper.pdf).
@@ -98,10 +104,9 @@ See [docs/PRODUCT.md](docs/PRODUCT.md).
 ## Limits (read before quoting numbers)
 
 - ANSYS Student licence: meshes are capped at 1M cells, so the CFD is coarse.
-- Steady RANS. The aero model uses a stationary wheel on a slip ground, so the
-  absolute drag coefficient (1.25-1.38) is too high, and the open-vs-closed
-  difference sits inside the wake noise on all three meshes. The momentum
-  limit is the result to quote.
+- Drag study: the rotating-wheel result is averaged over only 160 ms (about
+  four wake cycles) on one mesh, and its 95 % interval covers sampling noise
+  only. The drag coefficient (1.19) is still above real-wheel values.
 - The lap model is reduced-order, on a synthetic lap trace, calibrated to two
   steady Fluent cases.
 - The NiTiCu transformation temperatures are design targets, not a datasheet

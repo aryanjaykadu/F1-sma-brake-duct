@@ -1,0 +1,99 @@
+{
+  "variant": "Closed",
+  "mesh": "_coarse",
+  "omega_rad_s": 231.48148148148147,
+  "V_m_s": 83.33333333333333,
+  "dt_s": 0.001,
+  "n_steps": 3,
+  "iter_per_step": 3,
+  "steady_iter": 30,
+  "ground_state": {
+    "wall_motion": "Moving Wall",
+    "relative": "Absolute",
+    "rotating": false,
+    "components": true,
+    "velocity_spec": "Components",
+    "velocity_components": [
+      {
+        "option": "value",
+        "value": 0
+      },
+      {
+        "option": "value",
+        "value": 0
+      },
+      {
+        "option": "value",
+        "value": -83.33333333333333
+      }
+    ],
+    "shear_condition": "No Slip"
+  },
+  "spin_walls": [
+    "rotor_0",
+    "rotor_2",
+    "rotor_1",
+    "cover_0",
+    "wheel_0",
+    "cover_1",
+    "wheel_2",
+    "wheel_1",
+    "rotor_0-shadow",
+    "rotor_2-shadow",
+    "rotor_1-shadow"
+  ],
+  "wheel_state": {
+    "wall_motion": "Moving Wall",
+    "relative": "Absolute",
+    "rotating": true,
+    "components": false,
+    "velocity_spec": "Rotational",
+    "rotation_speed": {
+      "option": "value",
+      "value": 231.48148148148147
+    },
+    "rotation_axis_origin": [
+      0,
+      0,
+      0
+    ],
+    "rotation_axis_direction": [
+      1.0,
+      0,
+      0.0
+    ],
+    "shear_condition": "No Slip"
+  },
+  "steady_minutes": 1.0156013131141663,
+  "steady_drag_wheel_N": 1043.949347860405,
+  "steady_drag_cover_N": -0.8507109455197983,
+  "steady_drag_rotor_N": -0.5630133222222274,
+  "steady_drag_duct_N": 33.40507845651143,
+  "steady_drag_louver_N": -0.007718709439519958,
+  "steady_drag_total_N": 1075.932983339735,
+  "steady_Cd": 1.190932392489503,
+  "transient_report_state": {
+    "name": "drag-transient",
+    "file_name": "C:\\\\Temp\\\\F1_BrakeDuct\\\\cfd\\\\wheel\\\\drag_history_Closed_coarse_rot_transient.out",
+    "frequency_of": "time-step",
+    "frequency": 1,
+    "itr_index": "1",
+    "run_index": "0",
+    "report_defs": [
+      "drag-total",
+      "drag-duct",
+      "drag-wheel"
+    ],
+    "print": false,
+    "active": true,
+    "write_instantaneous_values": false
+  },
+  "transient_minutes": 0.12413692871729533,
+  "final_drag_wheel_N": 1044.241575996389,
+  "final_drag_cover_N": -0.6832746701901666,
+  "final_drag_rotor_N": -0.8063994115818477,
+  "final_drag_duct_N": 31.54178378889373,
+  "final_drag_louver_N": -0.01588662597237799,
+  "final_drag_total_N": 1074.277799077538,
+  "status": "COMPLETED"
+}

@@ -14,7 +14,6 @@ Data provenance rules
       fea/phase3_results.json                      (Phase 3 FEA)
       bench/Phase4_Correlation_Summary.json        (Phase 4 bench correlation)
       bench/Phase4_Bench_Test_Data.csv             (Phase 4 raw DAQ log)
-      cfd/wheel/wheel_mesh_independence.json       (drag study)
 * Values from the project brief that no file supports are shown as
   DESIGN TARGET. Bench data recorded with --simulate is shown as SIMULATED.
 * A SolidWorks .SLDPRT cannot be embedded in a PDF. The packaging and
@@ -515,9 +514,9 @@ class Context:
     def kpis(self):
         p4 = self.phase4 or {}
         src4 = self.bench_source
-        items = [("Aero Drag Delta (straights)", "max 1.4 %",
-                  "Momentum limit of the duct flow, isolated wheel at 300 km/h, 3 meshes (284k-768k cells). "
-                  "Direct CFD difference is within solver noise; brief target -18.4 % ruled out.",
+        items = [("Aero Drag Delta (straights)", "+0.5 %",
+                  "Rotating wheel, moving ground, time-averaged: closing the louvers adds 0.53 % drag "
+                  "(95 % interval +0.43 to +0.63 %). Momentum limit 1.1-1.4 %; brief target -18.4 % ruled out.",
                   "FLUENT 2026 R1")]
         if p4.get("onset_temp_C") is not None:
             items.append(("Actuation Trigger", fmt(p4["onset_temp_C"], ".1f", " °C"),
@@ -855,8 +854,10 @@ def page6(doc, st, ctx: Context):
                        "sign between meshes and stays inside the iteration noise of the unsteady wheel wake; the "
                        "duct's own drag changes by only 1-2 N. The robust result is the momentum limit: a sealed "
                        "duct can save at most its mass flow times speed, 13-15 N or 1.1-1.4 % of total drag on "
-                       "every mesh. Resolving the actual difference needs time-averaged transient CFD with a "
-                       "rotating wheel and a finer mesh than the Student licence allows.")
+                       "every mesh. With the wheel rotating on a moving ground and the drag time-averaged over "
+                       "160 ms of transient flow, closing the louvers adds 0.53 % drag (95 % interval +0.43 to "
+                       "+0.63 %): the duct's own drag falls 0.4 N but the wheel's rises more. Closing the duct "
+                       "therefore brings no drag benefit in this model.")
 
     fia = (
         "The brief cites Article 3.10 (Aerodynamic Influence). The Formula 1 Technical Regulations require that "

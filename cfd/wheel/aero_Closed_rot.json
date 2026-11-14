@@ -1,0 +1,99 @@
+{
+  "variant": "Closed",
+  "mesh": "fine",
+  "omega_rad_s": 231.48148148148147,
+  "V_m_s": 83.33333333333333,
+  "dt_s": 0.001,
+  "n_steps": 220,
+  "iter_per_step": 6,
+  "steady_iter": 400,
+  "ground_state": {
+    "wall_motion": "Moving Wall",
+    "relative": "Absolute",
+    "rotating": false,
+    "components": true,
+    "velocity_spec": "Components",
+    "velocity_components": [
+      {
+        "option": "value",
+        "value": 0
+      },
+      {
+        "option": "value",
+        "value": 0
+      },
+      {
+        "option": "value",
+        "value": -83.33333333333333
+      }
+    ],
+    "shear_condition": "No Slip"
+  },
+  "spin_walls": [
+    "rotor_1",
+    "rotor_0",
+    "rotor_2",
+    "wheel_0",
+    "cover_0",
+    "cover_1",
+    "wheel_2",
+    "wheel_1",
+    "rotor_1-shadow",
+    "rotor_0-shadow",
+    "rotor_2-shadow"
+  ],
+  "wheel_state": {
+    "wall_motion": "Moving Wall",
+    "relative": "Absolute",
+    "rotating": true,
+    "components": false,
+    "velocity_spec": "Rotational",
+    "rotation_speed": {
+      "option": "value",
+      "value": 231.48148148148147
+    },
+    "rotation_axis_origin": [
+      0,
+      0,
+      0
+    ],
+    "rotation_axis_direction": [
+      1.0,
+      0,
+      0.0
+    ],
+    "shear_condition": "No Slip"
+  },
+  "steady_minutes": 35.43471254905065,
+  "steady_drag_wheel_N": 1044.523923690836,
+  "steady_drag_cover_N": -0.1911653268824358,
+  "steady_drag_rotor_N": -0.4360623455629151,
+  "steady_drag_duct_N": 32.0722902924335,
+  "steady_drag_louver_N": 0.006715800419901507,
+  "steady_drag_total_N": 1075.975702111244,
+  "steady_Cd": 1.1909796771898933,
+  "transient_report_state": {
+    "name": "drag-transient",
+    "file_name": "C:\\\\Temp\\\\F1_BrakeDuct\\\\cfd\\\\wheel\\\\drag_history_Closed_rot_transient.out",
+    "frequency_of": "time-step",
+    "frequency": 1,
+    "itr_index": "1",
+    "run_index": "0",
+    "report_defs": [
+      "drag-total",
+      "drag-duct",
+      "drag-wheel"
+    ],
+    "print": false,
+    "active": true,
+    "write_instantaneous_values": false
+  },
+  "transient_minutes": 31.505875384807588,
+  "final_drag_wheel_N": 1047.597148527919,
+  "final_drag_cover_N": -0.1981795747076343,
+  "final_drag_rotor_N": -0.8068797775247749,
+  "final_drag_duct_N": 33.19560882700574,
+  "final_drag_louver_N": 0.02196308881792592,
+  "final_drag_total_N": 1079.80966109151,
+  "status": "COMPLETED"
+}

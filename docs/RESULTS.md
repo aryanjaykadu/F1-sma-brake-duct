@@ -13,7 +13,7 @@ The full walkthrough is in the Project Guidebook: `report/Project_Guidebook.pdf`
 |---|---|---|
 | 1. CAD | SOLIDWORKS 2025 | 4 parts + assembly, 16 mates solved. Louver at 80 deg moves the rod 14.000 mm. |
 | 2. CFD, Case A (braking) | Fluent 2026 R1 | Pocket air: 300.3 K beside the duct, 324.1 K on the rotor's wake face (492,211 cells): both below 358 K. With rotor radiation the spring wire reaches 378-393 K at emissivity 0.6: **opens**. |
-| 2. CFD, drag open vs closed | Fluent 2026 R1 | Isolated wheel at 300 km/h, three meshes (284k-768k cells). The direct open-vs-closed difference (-1.3 %, +5.2 %, -9.6 %) is within solver noise at every mesh, but physics caps any saving at **1.1-1.4 %** on all three. The -18.4 % target is **ruled out**. |
+| 2. CFD, drag open vs closed | Fluent 2026 R1 | Isolated wheel at 300 km/h. Stationary wheel on three meshes: the difference sits inside solver noise, and physics caps any saving at 1.1-1.4 %. Rotating wheel on a moving road, time-averaged: closing the louvers **adds 0.53 %** drag (95 % interval +0.43 to +0.63 %). The -18.4 % target is **ruled out**. |
 | 2. CFD, Case B (straight) | Fluent 2026 R1 | 300 km/h, 400 C rotor, louvers open (515,700 cells). Wire settles at 306-311 K for any emissivity, below Mf 318 K: **closes**. |
 | 3. Structure | MAPDL 2026 R1 | Original spring: 86.2 deg / 14.85 mm at 85 C. Recommended six-spring NiTiCu pack: 88.5 deg / 15.15 mm at 76 C. All stress checks pass FoS 2.5 in both (lowest 3.3). |
 | 4. Bench | Python DAQ logger | Logger verified at 20 Hz on a simulated signal only. No DAQ hardware was connected. |
@@ -131,6 +131,26 @@ The full walkthrough is in the Project Guidebook: `report/Project_Guidebook.pdf`
     CFD (URANS or DES), a rotating wheel on a moving ground and a finer mesh
     than the Student licence allows.
 
+  **Rotating wheel and moving road** (phase2_wheel_solve_rot.py,
+  phase2_wheel_rot_compare.py, cfd/wheel/wheel_rotating_open_vs_closed.json,
+  cfd/wheel/Wheel_Rotating_Transient_Drag.png). Wheel, cover and disc spin at
+  231.5 rad/s, the ground moves at 83.3 m/s, fine mesh. 400 steady iterations,
+  then 220 transient steps of 1 ms (6 iterations each); the first 60 ms are
+  discarded and drag is averaged over 160 ms. The standard error uses the
+  integrated autocorrelation time, cross-checked by batch means.
+
+  | | Open | Closed |
+  |---|---|---|
+  | Steady drag | 1,071.8 N | 1,076.0 N |
+  | Time-averaged drag | 1,073.5 +/- 0.2 N | 1,079.2 +/- 0.5 N |
+  | Change on closing | | +0.53 % (95 % interval +0.43 to +0.63 %) |
+  | Duct drag | 33.3 N | 32.9 N |
+
+  Closing the louvers adds drag in this model: the duct's own drag falls by
+  0.4 N, but the wheel's rises by more. Spinning the wheel lowered Cd from
+  about 1.3 to 1.19. Caveats: four wake cycles, one mesh, sampling noise
+  only.
+
   The absolute Cd (1.25-1.38 across the meshes, against ~0.6-0.8 typical for
   an isolated wheel) is high: the wheel does not spin, the ground does not
   move, and the mesh is capped at 1M cells.
@@ -191,10 +211,10 @@ The full walkthrough is in the Project Guidebook: `report/Project_Guidebook.pdf`
   digital twin. Its results are predictions. The lamp irradiance, blower
   curve and the twin's heat-transfer assumptions must be calibrated on real
   hardware.
-* The -18.4 % drag figure in the brief is not reproduced. Steady RANS on a
-  stationary wheel cannot resolve the open-vs-closed difference (it sits
-  inside the wake noise on all three meshes); the momentum limit caps any
-  saving at 1.1-1.4 %.
+* The -18.4 % drag figure in the brief is not reproduced. A stationary wheel
+  cannot resolve the open-vs-closed difference (it sits inside the wake noise
+  on all three meshes). With a rotating wheel and time averaging, closing
+  adds 0.5 %, but that is from 160 ms on one mesh.
 
 ## Folder layout
 
