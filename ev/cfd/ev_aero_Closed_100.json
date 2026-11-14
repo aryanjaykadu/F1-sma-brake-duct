@@ -1,0 +1,104 @@
+{
+  "variant": "Closed",
+  "speed_kmh": 100.0,
+  "iter": 900,
+  "interfaces": {
+    "region2-region252": 0.0787499999999999,
+    "region199-region252": 0.2000000000000007
+  },
+  "radiator_walls_to_symmetry": [
+    "radiator_1"
+  ],
+  "porous_state": {
+    "porous": true,
+    "dir_spec_cond": "Cartesian",
+    "direction_1_vector": [
+      {
+        "option": "value",
+        "value": 1
+      },
+      {
+        "option": "value",
+        "value": 0
+      },
+      {
+        "option": "value",
+        "value": 0
+      }
+    ],
+    "direction_2_vector": [
+      {
+        "option": "value",
+        "value": 0
+      },
+      {
+        "option": "value",
+        "value": 1
+      },
+      {
+        "option": "value",
+        "value": 0
+      }
+    ],
+    "rel_vel_resistance": true,
+    "viscous_resistance": [
+      {
+        "option": "value",
+        "value": 0.0
+      },
+      {
+        "option": "value",
+        "value": 0.0
+      },
+      {
+        "option": "value",
+        "value": 0.0
+      }
+    ],
+    "alt_inertial_form": false,
+    "inertial_resistance": [
+      {
+        "option": "value",
+        "value": 400.0
+      },
+      {
+        "option": "value",
+        "value": 400000.0
+      },
+      {
+        "option": "value",
+        "value": 400000.0
+      }
+    ],
+    "power_law_model": [
+      0,
+      0
+    ],
+    "porosity": {
+      "option": "value",
+      "value": 1
+    },
+    "relative_viscosity": {
+      "option": "constant",
+      "value": 1.0
+    }
+  },
+  "core_planes": {
+    "front": {
+      "p": -596.2884625780848,
+      "area": 0.07828851944669153,
+      "m": -0.003673345917359778
+    },
+    "back": {
+      "p": -595.4178668832909,
+      "area": 0.07828792366689483,
+      "m": -0.003953108595574872
+    }
+  },
+  "drag_walls_half_N": 311.1776198077683,
+  "radiator_force_half_N": -0.06855941096502008,
+  "drag_total_N": 622.2181207936065,
+  "radiator_mdot_kg_s": 0.007906217191149744,
+  "Cd": 0.5724185870796905,
+  "status": "COMPLETED"
+}

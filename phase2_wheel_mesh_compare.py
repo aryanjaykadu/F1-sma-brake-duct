@@ -101,7 +101,7 @@ ax[1].text(n[-1], -18.4, " brief target -18.4 %", color="tab:red", va="bottom", 
 ax[1].axhline(0, color="0.6", lw=0.8)
 ax[1].set_xlabel("Cells [thousand]")
 ax[1].set_ylabel("Drag change on closing [%]")
-ax[1].set_title("Drag change on closing: within solver noise at every\nmesh; physical limit 1.1-1.4 %")
+ax[1].set_title("Drag change on closing: within solver noise at every\nmesh; duct momentum drag 1.1-1.4 %")
 ax[1].legend(loc="upper right", fontsize=8)
 ax[2].plot(n, [r["throat_change_pct"] for r in rows], "o-", color="tab:blue")
 ax[2].set_xlabel("Cells [thousand]")

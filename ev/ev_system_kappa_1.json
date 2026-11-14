@@ -1,0 +1,203 @@
+{
+  "kappa": 1.0,
+  "phi_full_open": 0.17625904898906083,
+  "phi_source": "CFD",
+  "scenarios": {
+    "city_wltc_x2_25C": {
+      "ambient_C": 25.0,
+      "results": {
+        "open": {
+          "t_batt_max_C": 28.796745616591714,
+          "t_cool_max_C": 28.66506706908606,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 241.3877225457704,
+          "open_pct_time": 100.0,
+          "battery_Wh_per_100km": 16542.697355784774,
+          "distance_km": 42.42095555555556,
+          "cooling_drag_saved_Wh_per_100km": 0.0,
+          "battery_saved_pct": 0.0
+        },
+        "closed": {
+          "t_batt_max_C": 31.232203830948112,
+          "t_cool_max_C": 33.305033285789975,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 19.311017803661635,
+          "open_pct_time": 0.0,
+          "battery_Wh_per_100km": 15976.954311845479,
+          "distance_km": 42.42095555555556,
+          "cooling_drag_saved_Wh_per_100km": 523.507077654749,
+          "battery_saved_pct": 3.4198959926052375
+        },
+        "thermostat": {
+          "t_batt_max_C": 31.232203830948112,
+          "t_cool_max_C": 33.305033285789975,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 19.311017803661635,
+          "open_pct_time": 0.0,
+          "battery_Wh_per_100km": 15976.954311845479,
+          "distance_km": 42.42095555555556,
+          "cooling_drag_saved_Wh_per_100km": 523.507077654749,
+          "battery_saved_pct": 3.4198959926052375
+        },
+        "sma": {
+          "t_batt_max_C": 31.232203830948112,
+          "t_cool_max_C": 33.305033285789975,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 19.311017803661635,
+          "open_pct_time": 0.0,
+          "battery_Wh_per_100km": 15976.954311845479,
+          "distance_km": 42.42095555555556,
+          "cooling_drag_saved_Wh_per_100km": 523.507077654749,
+          "battery_saved_pct": 3.4198959926052375
+        }
+      }
+    },
+    "motorway_130_30C": {
+      "ambient_C": 30.0,
+      "results": {
+        "open": {
+          "t_batt_max_C": 35.02215613998504,
+          "t_cool_max_C": 33.14774778404703,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 1052.7472496450087,
+          "open_pct_time": 100.0,
+          "battery_Wh_per_100km": 21393.4848544978,
+          "distance_km": 87.7861111111111,
+          "cooling_drag_saved_Wh_per_100km": 0.0,
+          "battery_saved_pct": 0.0
+        },
+        "closed": {
+          "t_batt_max_C": 38.975962989216306,
+          "t_cool_max_C": 40.0066456597196,
+          "time_cool_above_40C_s": 5.0,
+          "cooling_drag_energy_Wh": 84.21977997160069,
+          "open_pct_time": 0.0,
+          "battery_Wh_per_100km": 20169.258274211923,
+          "distance_km": 87.7861111111111,
+          "cooling_drag_saved_Wh_per_100km": 1103.2809830789067,
+          "battery_saved_pct": 5.722427124950125
+        },
+        "thermostat": {
+          "t_batt_max_C": 37.27130721571563,
+          "t_cool_max_C": 38.000434184878976,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 293.09410105237237,
+          "open_pct_time": 22.136474411047928,
+          "battery_Wh_per_100km": 20431.98987162574,
+          "distance_km": 87.7861111111111,
+          "cooling_drag_saved_Wh_per_100km": 865.3454845848466,
+          "battery_saved_pct": 4.49433549237731
+        },
+        "sma": {
+          "t_batt_max_C": 37.85822024194009,
+          "t_cool_max_C": 37.09629218959452,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 146.5511354041767,
+          "open_pct_time": 0.0,
+          "battery_Wh_per_100km": 20247.831760540757,
+          "distance_km": 87.7861111111111,
+          "cooling_drag_saved_Wh_per_100km": 1032.2773190099028,
+          "battery_saved_pct": 5.355149484756239
+        }
+      }
+    },
+    "hot_day_motorway_38C": {
+      "ambient_C": 38.0,
+      "results": {
+        "open": {
+          "t_batt_max_C": 43.02215613998508,
+          "t_cool_max_C": 41.147747784047034,
+          "time_cool_above_40C_s": 281.0,
+          "cooling_drag_energy_Wh": 1052.7472496450087,
+          "open_pct_time": 100.0,
+          "battery_Wh_per_100km": 21393.4848544978,
+          "distance_km": 87.7861111111111,
+          "cooling_drag_saved_Wh_per_100km": 0.0,
+          "battery_saved_pct": 0.0
+        },
+        "closed": {
+          "t_batt_max_C": 46.97596298921628,
+          "t_cool_max_C": 48.00664565971958,
+          "time_cool_above_40C_s": 2436.0,
+          "cooling_drag_energy_Wh": 84.21977997160069,
+          "open_pct_time": 0.0,
+          "battery_Wh_per_100km": 20169.258274211923,
+          "distance_km": 87.7861111111111,
+          "cooling_drag_saved_Wh_per_100km": 1103.2809830789067,
+          "battery_saved_pct": 5.722427124950125
+        },
+        "thermostat": {
+          "t_batt_max_C": 43.022156138119236,
+          "t_cool_max_C": 41.14774778328083,
+          "time_cool_above_40C_s": 281.0,
+          "cooling_drag_energy_Wh": 1052.7472349340053,
+          "open_pct_time": 99.95938261575954,
+          "battery_Wh_per_100km": 21393.48483587805,
+          "distance_km": 87.7861111111111,
+          "cooling_drag_saved_Wh_per_100km": 1.675777998738342e-05,
+          "battery_saved_pct": 8.703467946347132e-08
+        },
+        "sma": {
+          "t_batt_max_C": 43.0253195477729,
+          "t_cool_max_C": 41.14904686362257,
+          "time_cool_above_40C_s": 286.0,
+          "cooling_drag_energy_Wh": 1043.629749599999,
+          "open_pct_time": 99.95938261575954,
+          "battery_Wh_per_100km": 21381.944810774094,
+          "distance_km": 87.7861111111111,
+          "cooling_drag_saved_Wh_per_100km": 10.386039351338335,
+          "battery_saved_pct": 0.05394186034763937
+        }
+      }
+    },
+    "cold_day_wltc_x2_5C": {
+      "ambient_C": 5.0,
+      "results": {
+        "open": {
+          "t_batt_max_C": 8.796745616591657,
+          "t_cool_max_C": 8.665067069086044,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 241.3877225457704,
+          "open_pct_time": 100.0,
+          "battery_Wh_per_100km": 16542.697355784774,
+          "distance_km": 42.42095555555556,
+          "cooling_drag_saved_Wh_per_100km": 0.0,
+          "battery_saved_pct": 0.0
+        },
+        "closed": {
+          "t_batt_max_C": 11.232203830948066,
+          "t_cool_max_C": 13.305033285789921,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 19.311017803661635,
+          "open_pct_time": 0.0,
+          "battery_Wh_per_100km": 15976.954311845479,
+          "distance_km": 42.42095555555556,
+          "cooling_drag_saved_Wh_per_100km": 523.507077654749,
+          "battery_saved_pct": 3.4198959926052375
+        },
+        "thermostat": {
+          "t_batt_max_C": 11.232203830948066,
+          "t_cool_max_C": 13.305033285789921,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 19.311017803661635,
+          "open_pct_time": 0.0,
+          "battery_Wh_per_100km": 15976.954311845479,
+          "distance_km": 42.42095555555556,
+          "cooling_drag_saved_Wh_per_100km": 523.507077654749,
+          "battery_saved_pct": 3.4198959926052375
+        },
+        "sma": {
+          "t_batt_max_C": 11.232203830948066,
+          "t_cool_max_C": 13.305033285789921,
+          "time_cool_above_40C_s": 0.0,
+          "cooling_drag_energy_Wh": 19.311017803661635,
+          "open_pct_time": 0.0,
+          "battery_Wh_per_100km": 15976.954311845479,
+          "distance_km": 42.42095555555556,
+          "cooling_drag_saved_Wh_per_100km": 523.507077654749,
+          "battery_saved_pct": 3.4198959926052375
+        }
+      }
+    }
+  }
+}

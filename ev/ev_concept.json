@@ -1,0 +1,163 @@
+{
+  "vehicle": {
+    "mass_kg": 1800,
+    "frontal_area_m2": 2.3,
+    "cd_shutters_closed": 0.27,
+    "crr": 0.009
+  },
+  "radiator": {
+    "width_m": 0.45,
+    "height_m": 0.35,
+    "depth_m": 0.025,
+    "loss_coeff_K": 10.0,
+    "area_m2": 0.1575
+  },
+  "shutter": {
+    "n_louvers": 6,
+    "louver_span_m": 0.44,
+    "louver_chord_m": 0.058,
+    "open_angle_deg": 80.0
+  },
+  "sma": {
+    "As_C": 35.0,
+    "Af_C": 40.0,
+    "Ms_C": 30.0,
+    "Mf_C": 25.0
+  },
+  "k_system": 16.0,
+  "cp_drive": 0.9,
+  "table": [
+    {
+      "speed_kmh": 20.0,
+      "face_velocity_m_s": 1.3176156917368247,
+      "radiator_mdot_kg_s": 0.24902936573825984,
+      "cooling_drag_bound_N": 1.3834964763236657,
+      "body_drag_closed_N": 11.499999999999996,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 3.0836666666666672
+    },
+    {
+      "speed_kmh": 30.0,
+      "face_velocity_m_s": 1.9764235376052373,
+      "radiator_mdot_kg_s": 0.3735440486073898,
+      "cooling_drag_bound_N": 3.1128670717282487,
+      "body_drag_closed_N": 25.875000000000004,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 6.938250000000002
+    },
+    {
+      "speed_kmh": 40.0,
+      "face_velocity_m_s": 2.6352313834736494,
+      "radiator_mdot_kg_s": 0.4980587314765197,
+      "cooling_drag_bound_N": 5.533985905294663,
+      "body_drag_closed_N": 45.999999999999986,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 12.334666666666669
+    },
+    {
+      "speed_kmh": 50.0,
+      "face_velocity_m_s": 3.294039229342062,
+      "radiator_mdot_kg_s": 0.6225734143456497,
+      "cooling_drag_bound_N": 8.646852977022913,
+      "body_drag_closed_N": 71.875,
+      "bound_pct_of_total": 10.73851713210116,
+      "louver_torque_Nmm": 19.272916666666667
+    },
+    {
+      "speed_kmh": 60.0,
+      "face_velocity_m_s": 3.9528470752104745,
+      "radiator_mdot_kg_s": 0.7470880972147796,
+      "cooling_drag_bound_N": 12.451468286912995,
+      "body_drag_closed_N": 103.50000000000001,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 27.753000000000007
+    },
+    {
+      "speed_kmh": 70.0,
+      "face_velocity_m_s": 4.611654921078886,
+      "radiator_mdot_kg_s": 0.8716027800839093,
+      "cooling_drag_bound_N": 16.9478318349649,
+      "body_drag_closed_N": 140.87499999999997,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 37.77491666666666
+    },
+    {
+      "speed_kmh": 80.0,
+      "face_velocity_m_s": 5.270462766947299,
+      "radiator_mdot_kg_s": 0.9961174629530394,
+      "cooling_drag_bound_N": 22.13594362117865,
+      "body_drag_closed_N": 183.99999999999994,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 49.338666666666676
+    },
+    {
+      "speed_kmh": 90.0,
+      "face_velocity_m_s": 5.929270612815711,
+      "radiator_mdot_kg_s": 1.1206321458221693,
+      "cooling_drag_bound_N": 28.015803645554232,
+      "body_drag_closed_N": 232.87499999999997,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 62.444250000000004
+    },
+    {
+      "speed_kmh": 100.0,
+      "face_velocity_m_s": 6.588078458684124,
+      "radiator_mdot_kg_s": 1.2451468286912994,
+      "cooling_drag_bound_N": 34.58741190809165,
+      "body_drag_closed_N": 287.5,
+      "bound_pct_of_total": 10.73851713210116,
+      "louver_torque_Nmm": 77.09166666666667
+    },
+    {
+      "speed_kmh": 110.0,
+      "face_velocity_m_s": 7.246886304552535,
+      "radiator_mdot_kg_s": 1.3696615115604291,
+      "cooling_drag_bound_N": 41.85076840879089,
+      "body_drag_closed_N": 347.875,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 93.28091666666667
+    },
+    {
+      "speed_kmh": 120.0,
+      "face_velocity_m_s": 7.905694150420949,
+      "radiator_mdot_kg_s": 1.4941761944295593,
+      "cooling_drag_bound_N": 49.80587314765198,
+      "body_drag_closed_N": 414.00000000000006,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 111.01200000000003
+    },
+    {
+      "speed_kmh": 130.0,
+      "face_velocity_m_s": 8.56450199628936,
+      "radiator_mdot_kg_s": 1.6186908772986892,
+      "cooling_drag_bound_N": 58.45272612467488,
+      "body_drag_closed_N": 485.87499999999983,
+      "bound_pct_of_total": 10.738517132101162,
+      "louver_torque_Nmm": 130.28491666666665
+    },
+    {
+      "speed_kmh": 140.0,
+      "face_velocity_m_s": 9.223309842157771,
+      "radiator_mdot_kg_s": 1.7432055601678187,
+      "cooling_drag_bound_N": 67.7913273398596,
+      "body_drag_closed_N": 563.4999999999999,
+      "bound_pct_of_total": 10.738517132101158,
+      "louver_torque_Nmm": 151.09966666666665
+    }
+  ],
+  "shutter_force_needed_N": 97.71368749999998,
+  "shutter_stroke_mm": 19.283628290596177,
+  "crank_r_mm": 15.0,
+  "sma_spring": {
+    "wire_mm": 1.0,
+    "coil_mm": 5.0,
+    "force_each_N": 19.634954084936208,
+    "count": 5
+  },
+  "comparison": {
+    "f1_duct_mdot_kg_s": 0.155,
+    "f1_bound_pct": 1.1,
+    "ev_mdot_100kmh": 1.2451468286912994,
+    "ev_bound_pct_100kmh": 10.73851713210116
+  }
+}

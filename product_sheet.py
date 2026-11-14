@@ -67,7 +67,7 @@ results = [
     ["Thermal CFD", "Rotor radiation at the spring pocket 119-129 kW/m² (Fluent DO); air alone cannot trigger the spring"],
     ["Lap model", "Opens 4-5 s after the 3 hardest braking zones, open 2 % of straight-line time"],
     ["Aero CFD", "Rotating wheel on a moving road at 300 km/h, time-averaged: closing the louvers adds 0.5 % drag; "
-                 "any saving is capped at 1.1-1.4 % by the duct's momentum flux (brief claimed 18.4 %)"],
+                 "the duct's own momentum drag is only 1.1-1.4 % of the total (brief claimed 18.4 %)"],
     ["Bench rig", "Lamp + blower rig, Arduino shield (ERC/DRC clean, Gerbers), firmware 57 % flash / 55 % RAM"],
     ["Digital twin", f"Same firmware code + physics: reproduces the car lap's openings ({t3['rig_vs_car_open_state_agreement_pct']:.0f} % "
                      "agreement); 1,000 cycles, 0 faults; caught 3 design errors before build"],

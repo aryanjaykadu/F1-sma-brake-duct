@@ -84,9 +84,10 @@ fast.
 | Does the brief's 1.2 mm NiTi spring work over a lap? | No: it never opens, or stays stuck open |
 | Fix | Six 0.5 mm NiTiCu springs (Af 76 °C / Mf 58 °C): open after the 3 hardest braking zones, open only 2 % of straight time |
 | Is it strong enough? | Yes: all stress checks pass, lowest factor of safety 3.3 (MAPDL) |
-| Does closing the duct save 18.4 % drag? | **No. Physics caps any saving at 1.1-1.4 %; with a rotating wheel and moving road, closing actually adds 0.5 % drag** |
+| Does closing the duct save 18.4 % drag? | **No. The duct's own momentum drag is only 1.1-1.4 % of the total, and with a rotating wheel and moving road closing actually adds 0.5 % drag** |
 | Is it legal in F1? | No: moving aerodynamic parts are banned |
 | Can it be tested? | A bench rig, its electronics, firmware and a digital twin are designed; the twin predicts the rig reproduces the car behaviour |
+| Where does the idea pay off? | An EV grille shutter: closing it cuts drag 14.5 % on a simple CFD car; on a real car about 3-5 % less battery energy, with no motor or wiring |
 
 ## 4. Tools used and why
 
@@ -300,11 +301,16 @@ licence's 1 million cell limit rules out a finer level.
   * The duct's own drag changes by only 1-2 N between open and closed.
   * The total swings come from the wheel's unsteady wake, which a steady
     simulation cannot settle.
-* **The physical limit is robust.** A duct cannot save more drag than the
-  momentum of the air it swallows:
-  `D_max ≈ ṁ V = 0.155-0.183 kg/s x 83 m/s ≈ 13-15 N`
-  That is **1.1-1.4 % of the total drag on all three meshes**. The brief's
-  -18.4 % is more than ten times this limit, so it is ruled out.
+* **The scale of the effect.** The duct's own through-flow (momentum) drag
+  is the momentum of the air it swallows:
+  `D_duct ≈ ṁ V = 0.155-0.183 kg/s x 83 m/s ≈ 13-15 N`
+  That is **1.1-1.4 % of the total drag on all three meshes**. It is not a
+  hard cap on the change: closing an inlet also changes how the outside flow
+  meets the body (interference), and that part can add to or cancel the
+  momentum term. The EV shutter study in this project measured interference
+  at about four times the momentum term. The brief's -18.4 % would need
+  interference more than ten times the momentum term, which is why the
+  transient run below was needed to settle it.
 * **Resolving the actual difference** needs time-averaged transient CFD with
   a rotating wheel on a moving ground (next step).
 
@@ -333,8 +339,9 @@ settled 160 ms (fine mesh).
   real-wheel values.
 
 **Conclusion of the drag study:** in every model the effect of closing the
-louvers is a fraction of a percent, within the 1.1-1.4 % physical limit. In
-the most realistic model it is a small penalty, not a saving. The brief's
+louvers is a fraction of a percent, the same order as the duct's 1.1-1.4 %
+momentum drag. In the most realistic model it is a small penalty, not a
+saving. The brief's
 -18.4 % is ruled out.
 
 ### 5.9 Phase 7 - Product package
@@ -351,6 +358,40 @@ the most realistic model it is a small penalty, not a saving. The brief's
 * **Product sheet:** one page.
 
 ![Module, isometric view](../cad/product/Module_iso.png)
+
+### 5.10 Re-target - passive SMA grille shutter for an electric car
+
+F1 bans moving aero parts, and the brake duct moves too little air to
+matter. An EV radiator moves about ten times more air relative to the
+car's drag, and its coolant runs at 25-40 °C. That suits a
+low-temperature NiTi spring (As 35 / Af 40 °C) sitting in the coolant
+return line. Full details are in [EV_COOLING.md](EV_COOLING.md).
+
+**CFD (half car, porous radiator, moving road):**
+* Closing the shutters cuts drag by 105 N at 100 km/h and 182 N at
+  130 km/h, 14.5 % both times (ΔCd 0.10).
+* Iteration noise is under ±10 N.
+* The saving scales with V².
+* The saving is about four times the radiator's momentum drag (ṁ V). The
+  rest is interference from the plain floor exit, which a production car
+  would be shaped to avoid.
+
+**Drive-cycle model** (CFD flow coefficient, cooling drag in the road
+load):
+
+| Scenario | SMA shutter | Battery energy saved, production-car estimate (κ = 1) |
+|---|---|---|
+| City 25 °C | stays shut | 3.4 % |
+| Motorway 130 km/h, 30 °C | stays shut, coolant 37 °C | 5.4 % (motorised thermostat: 4.5 %) |
+| Hot day 38 °C | opens fully | 0 %, same coolant peak as an open grille |
+
+**Module CAD:** six louvers on a glass-filled PA66 frame driven through a
+scotch-yoke bar (14.8 mm lift for 80°).
+* Five NiTi springs in a clear coolant sleeve lift the bar.
+* A steel bias spring pulls it shut.
+* Zero interferences shut and fully open.
+
+![EV shutter closed and open](../ev/EV_Shutter_Closed_vs_Open.png)
 
 ## 6. Key equations
 
@@ -371,7 +412,9 @@ model and the twin):
 
 **Crank kinematics:** `stroke = R (sin(θ + φ0) - sin φ0)`
 
-**Momentum drag bound:** `D_max ≈ ṁ V`
+**Duct momentum drag:** `D_duct ≈ ṁ V`. This is the through-flow part
+only. Interference with the outside flow adds to it or cancels it, so the
+total cooling drag is written `κ ṁ V`, with κ found by CFD.
 
 ## 7. Limits
 
@@ -396,9 +439,10 @@ model and the twin):
    hardware.
 3. Compare measured hysteresis, response time and force with the
    predictions, and update the models.
-4. Re-target the concept where it is legal and useful: road-car and
-   motorcycle brake cooling, or battery and motor vents in electric
-   vehicles.
+4. Re-target the concept where it is legal and useful (started: the EV
+   grille shutter in section 5.10). Next for it: a production-shaped
+   cooling exit in the CFD, a coolant-sleeve bench test, and sourcing a
+   35 / 40 °C NiTi grade.
 
 ## 9. Repository map
 
@@ -411,6 +455,7 @@ model and the twin):
 | `phase5_generate_whitepaper.py` | Whitepaper PDF |
 | `rig_cad.py`, `electronics/`, `firmware/` | Bench rig CAD, shield PCB, firmware, digital twin |
 | `product_*.py` | Product CAD, animation, drawing, product sheet |
+| `ev/` | EV grille-shutter re-target: sizing, half-car CFD, drive-cycle model, shutter CAD |
 | `cad/`, `cfd/`, `fea/`, `bench/`, `report/` | Models, plots, result files, PDFs |
 | `docs/` | This guidebook, detailed results, rig and product notes |
 

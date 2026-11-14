@@ -30,12 +30,15 @@ Product package: [one-page product sheet](report/SMA_Duct_Module_Product_Sheet.p
 | Redesign | Six 0.5 mm NiTiCu springs (Af 76 °C, Mf 58 °C). They open after the 3 hardest braking zones and are open 2 % of straight-line time | `cfd/transient/`, `fea/pack_NiTiCu/` |
 | Stresses OK? | Yes, lowest factor of safety 3.3 | MAPDL, `fea/` |
 | Does closing the louvers cut drag by 18.4 %, as the brief assumed? | **No. With a rotating wheel on a moving road, closing them adds 0.5 % drag** | Isolated-wheel Fluent, `cfd/wheel/` |
+| Where does the idea pay off? | On an EV grille shutter: closing it cuts drag 14.5 % on a simple CFD car, and about 3-5 % of battery energy on a real one | `ev/`, `docs/EV_COOLING.md` |
 
 The drag result is the main finding, reached in three steps:
 
-1. **Physical limit.** A duct can't save more drag than the momentum of the
-   air it swallows: 0.155-0.183 kg/s × 83 m/s ≈ 13-15 N, or 1.1-1.4 % of
-   total drag on every mesh. So no louver design gets close to 18 %.
+1. **Scale.** The duct's own through-flow drag is the momentum of the air it
+   swallows: 0.155-0.183 kg/s × 83 m/s ≈ 13-15 N, or 1.1-1.4 % of total drag
+   on every mesh. Closing the inlet also changes the outside flow
+   (interference), so this is not a hard cap, but 18 % would need
+   interference more than ten times larger.
 2. **Mesh study, stationary wheel.** On 284k, 408k and 768k cells the
    open-vs-closed difference (-9.6 %, +5.2 %, -1.3 %) stayed within the
    solver noise from the unsteady wheel wake.
@@ -101,6 +104,34 @@ See [docs/PRODUCT.md](docs/PRODUCT.md).
 
 ![Product sheet preview](cad/product/Module_trimetric.png)
 
+## Re-target: passive grille shutter for an EV
+
+F1 bans moving aero parts and the brake duct moves too little air to
+matter, so I moved the same idea to where it can pay: an EV radiator
+shutter. A low-temperature NiTi spring pack (As 35 / Af 40 °C) sits in the
+coolant return line and opens six louvers when the coolant warms. It needs
+no motor, sensor or wiring.
+
+- **CFD, half car with a porous radiator and moving road:**
+  - Closing the shutters cuts drag by 105 N at 100 km/h and 182 N at
+    130 km/h, both 14.5 %. Iteration noise is under ±10 N, and the saving
+    scales with V².
+  - About three quarters of the saving is interference from the plain
+    floor exit, not the radiator's own momentum drag.
+- **Drive-cycle model, with cooling drag in the road load:**
+  - At a production-car level of cooling drag the shutter saves 3.4 % of
+    battery energy in the city and 5.4 % at 130 km/h. A motorised
+    thermostat shutter saves 4.5 %.
+  - On a 38 °C day it opens fully and the coolant peak matches an open
+    grille.
+- **Module CAD:** frame, six louvers, a scotch-yoke bar (14.8 mm lift for
+  80°), the SMA pack in a clear coolant sleeve and a bias spring. Zero
+  interferences shut and open.
+
+See [docs/EV_COOLING.md](docs/EV_COOLING.md).
+
+![EV shutter closed and open](ev/EV_Shutter_Closed_vs_Open.png)
+
 ## Limits (read before quoting numbers)
 
 - ANSYS Student licence: meshes are capped at 1M cells, so the CFD is coarse.
@@ -135,6 +166,7 @@ Arduino (Uno), C++, gmsh and Python.
 | `product_*.py` | Product module CAD, animation, drawing and product sheet |
 | `electronics/` | KiCad shield: schematic and PCB generators, Gerbers, BOM |
 | `firmware/` | Arduino firmware, lap-profile generator, digital twin and test campaign |
+| `ev/` | EV grille-shutter re-target: sizing, half-car CFD, drive-cycle model, shutter CAD |
 | `cad/`, `cfd/`, `fea/`, `bench/`, `report/` | Models, plots and result JSON |
 
 Solver case and data files (several GB) are not included. Re-running needs

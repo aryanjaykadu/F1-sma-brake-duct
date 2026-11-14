@@ -13,13 +13,14 @@ The full walkthrough is in the Project Guidebook: `report/Project_Guidebook.pdf`
 |---|---|---|
 | 1. CAD | SOLIDWORKS 2025 | 4 parts + assembly, 16 mates solved. Louver at 80 deg moves the rod 14.000 mm. |
 | 2. CFD, Case A (braking) | Fluent 2026 R1 | Pocket air: 300.3 K beside the duct, 324.1 K on the rotor's wake face (492,211 cells): both below 358 K. With rotor radiation the spring wire reaches 378-393 K at emissivity 0.6: **opens**. |
-| 2. CFD, drag open vs closed | Fluent 2026 R1 | Isolated wheel at 300 km/h. Stationary wheel on three meshes: the difference sits inside solver noise, and physics caps any saving at 1.1-1.4 %. Rotating wheel on a moving road, time-averaged: closing the louvers **adds 0.53 %** drag (95 % interval +0.43 to +0.63 %). The -18.4 % target is **ruled out**. |
+| 2. CFD, drag open vs closed | Fluent 2026 R1 | Isolated wheel at 300 km/h. Stationary wheel on three meshes: the difference sits inside solver noise, and the duct's own momentum drag is only 1.1-1.4 % of the total. Rotating wheel on a moving road, time-averaged: closing the louvers **adds 0.53 %** drag (95 % interval +0.43 to +0.63 %). The -18.4 % target is **ruled out**. |
 | 2. CFD, Case B (straight) | Fluent 2026 R1 | 300 km/h, 400 C rotor, louvers open (515,700 cells). Wire settles at 306-311 K for any emissivity, below Mf 318 K: **closes**. |
 | 3. Structure | MAPDL 2026 R1 | Original spring: 86.2 deg / 14.85 mm at 85 C. Recommended six-spring NiTiCu pack: 88.5 deg / 15.15 mm at 76 C. All stress checks pass FoS 2.5 in both (lowest 3.3). |
 | 4. Bench | Python DAQ logger | Logger verified at 20 Hz on a simulated signal only. No DAQ hardware was connected. |
 | 5. Report | ReportLab | 6-page whitepaper PDF built from the files above. |
 | 6. Bench rig (virtual) | SOLIDWORKS, KiCad 10, arduino-cli, MSVC | Rig CAD (0 interferences), Arduino shield (ERC/DRC clean, Gerbers), firmware (57 % flash, 55 % RAM) and a digital twin running the same firmware code. Twin: 11.5 °C hysteresis on a slow ramp, thin wire closes 3x faster, rig reproduces the car lap's 3 openings (87 % agreement). Not built yet. See `docs/RIG.md`. |
 | 7. Product package | SOLIDWORKS, KiCad, ReportLab | Production-detail module CAD with real coil springs (0 interferences), actuation animation, A3 drawing SMA-DM-001 with parts list, 1-page product sheet, rig with the shield PCB in 3D. See `docs/PRODUCT.md`. |
+| 8. EV re-target | SOLIDWORKS, Fluent 2026 R1, Python | Half-car CFD with a porous radiator: closing the grille shutter cuts drag 14.5 % (105 N at 100 km/h, 182 N at 130 km/h; κ ≈ 4 against the radiator's momentum drag). Drive-cycle model: 3.4-5.4 % battery energy saved at a production-car κ = 1; opens fully on a 38 °C day. Shutter module CAD, 0 interferences shut and open. See `docs/EV_COOLING.md`. |
 
 ## What the results mean
 
@@ -123,10 +124,11 @@ The full walkthrough is in the Project Guidebook: `report/Project_Guidebook.pdf`
     between open and closed on every mesh. The total swings come from the
     wheel's unsteady wake (-19 N, +41 N, -133 N), which steady RANS cannot
     settle.
-  * **The bound is robust.** Even a fully sealed duct can save at most its
-    momentum drag, the duct mass flow times speed: 12.9-15.3 N, or 1.1-1.4 %
-    of total drag on all three meshes. The -18.4 % target is more than ten
-    times this limit.
+  * **The scale is small.** The duct's through-flow (momentum) drag, mass
+    flow times speed, is 12.9-15.3 N, or 1.1-1.4 % of total drag on all three
+    meshes. This is not a strict cap, since closing the inlet also changes
+    the outside flow around the wheel (interference), but the -18.4 % target
+    would need interference more than ten times the momentum term.
   * **Resolving the actual difference** would need time-averaged transient
     CFD (URANS or DES), a rotating wheel on a moving ground and a finer mesh
     than the Student licence allows.
@@ -225,6 +227,7 @@ The full walkthrough is in the Project Guidebook: `report/Project_Guidebook.pdf`
 | `fea/` | MAPDL meshes, stress and hysteresis figures, results JSON |
 | `bench/` | Simulated DAQ log, dashboard, correlation summary |
 | `report/` | Whitepaper PDF and its figures |
+| `ev/` | EV grille-shutter re-target: sizing, half-car CFD, drive-cycle model, shutter CAD |
 
 ## Re-running
 

@@ -1,0 +1,81 @@
+{
+ "open": true,
+ "domain_mm": {
+  "x": [
+   -9000,
+   22000
+  ],
+  "y": [
+   0,
+   6000
+  ],
+  "z": [
+   0,
+   4500
+  ]
+ },
+ "car_box_mm": [
+  -0.0,
+  150.0,
+  0.0,
+  4400.0,
+  1500.0,
+  900.0
+ ],
+ "radiator_box_mm": [
+  200,
+  470,
+  0,
+  225,
+  820,
+  225
+ ],
+ "labels": {
+  "car": [
+   "car_0",
+   "car_1",
+   "car_2",
+   "car_3",
+   "car_4",
+   "car_5",
+   "car_6",
+   "car_7",
+   "car_8",
+   "car_9",
+   "car_10",
+   "car_11",
+   "car_12",
+   "car_13",
+   "car_14",
+   "car_15"
+  ],
+  "symmetry": [
+   "symmetry_0"
+  ],
+  "farfield": [
+   "farfield_0",
+   "farfield_1"
+  ],
+  "ground": [
+   "ground_0"
+  ],
+  "outlet": [
+   "outlet"
+  ],
+  "inlet": [
+   "inlet"
+  ],
+  "radiator_if": [
+   "radiator_if_0",
+   "radiator_if_1"
+  ],
+  "radiator": [
+   "id_radiator",
+   "radiator_0",
+   "radiator_1",
+   "radiator_2",
+   "radiator_3",
+   "radiator_4"
+  ]
+ }
+}

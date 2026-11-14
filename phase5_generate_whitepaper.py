@@ -516,7 +516,7 @@ class Context:
         src4 = self.bench_source
         items = [("Aero Drag Delta (straights)", "+0.5 %",
                   "Rotating wheel, moving ground, time-averaged: closing the louvers adds 0.53 % drag "
-                  "(95 % interval +0.43 to +0.63 %). Momentum limit 1.1-1.4 %; brief target -18.4 % ruled out.",
+                  "(95 % interval +0.43 to +0.63 %). Duct momentum drag 1.1-1.4 %; brief target -18.4 % ruled out.",
                   "FLUENT 2026 R1")]
         if p4.get("onset_temp_C") is not None:
             items.append(("Actuation Trigger", fmt(p4["onset_temp_C"], ".1f", " °C"),
@@ -852,9 +852,9 @@ def page6(doc, st, ctx: Context):
                        "300 km/h (wheel, cover, rotor, duct with forward scoop) was solved on three meshes (284k, "
                        "408k and 768k cells). The direct open-vs-closed difference (-9.6 %, +5.2 %, -1.3 %) changes "
                        "sign between meshes and stays inside the iteration noise of the unsteady wheel wake; the "
-                       "duct's own drag changes by only 1-2 N. The robust result is the momentum limit: a sealed "
-                       "duct can save at most its mass flow times speed, 13-15 N or 1.1-1.4 % of total drag on "
-                       "every mesh. With the wheel rotating on a moving ground and the drag time-averaged over "
+                       "duct's own drag changes by only 1-2 N. The duct's through-flow (momentum) drag, mass flow "
+                       "times speed, is 13-15 N or 1.1-1.4 % of total drag on every mesh; interference with the "
+                       "outside flow can move the total either way, so this sets the scale rather than a cap. With the wheel rotating on a moving ground and the drag time-averaged over "
                        "160 ms of transient flow, closing the louvers adds 0.53 % drag (95 % interval +0.43 to "
                        "+0.63 %): the duct's own drag falls 0.4 N but the wheel's rises more. Closing the duct "
                        "therefore brings no drag benefit in this model.")
